@@ -3,754 +3,450 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Orpurkel Farms Ltd — A Sustainable Journey</title>
-  <!-- SEO & Meta Tags -->
-  <meta name="description" content="Orpurkel Farms Ltd delivers premium, traceable, and sustainable produce including tomatoes, onions, capsicum, and fresh dairy from our farms in Kajiado, Kenya." />
-  <meta name="keywords" content="Orpurkel Farms, Kajiado, greenhouse tomatoes, onions, capsicum, dairy, compost, sustainable farming, Kenya agriculture" />
+  <title>Orpurkel Farms Ltd — Premium Produce from Imbirikani, Kajiado South</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Orpurkel Farms Ltd produces premium greenhouse vegetables, ethical dairy, and regenerative compost from Imbirikani, Kajiado South. Supplying hotels, schools and retailers in Nairobi." />
+  <meta name="keywords" content="Orpurkel Farms, Kajiado, greenhouse tomatoes, dairy, compost, sustainable farming, Kenya agriculture, Imbirikani" />
   <meta name="author" content="Orpurkel Farms Ltd" />
   <meta name="theme-color" content="#0b122b" />
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Orpurkel Farms Ltd — Premium Produce from Imbirikani" />
   <meta property="og:description" content="Discover premium greenhouse vegetables, ethical dairy, and regenerative compost from Orpurkel Farms in Kajiado South, Kenya." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1400&auto=format&fit=crop" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1200&auto=format&fit=crop" />
   <meta property="og:url" content="https://www.orpurkelfarms.com" />
+  <meta property="og:type" content="website" />
 
-  <!-- External Fonts & Styles -->
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Orpurkel Farms Ltd — Premium Produce" />
+  <meta name="twitter:description" content="Greenhouse vegetables, dairy and compost from Imbirikani, Kajiado South." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1200&auto=format&fit=crop" />
+
+  <!-- Structured data (Organization) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Orpurkel Farms Ltd",
+    "url":"https://www.orpurkelfarms.com",
+    "logo":"https://placehold.co/128x128/333/fff?text=OF",
+    "contactPoint":[{"@type":"ContactPoint","telephone":"+254112944092","contactType":"customer service","areaServed":"KE"}],
+    "sameAs":["https://facebook.com","https://instagram.com","https://twitter.com"]
+  }
+  </script>
+
+  <!-- External Fonts & CSS -->
   <link rel="icon" href="https://placehold.co/32x32/333/fff?text=OF" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-  
+
   <style>
     /* ----------------------------------- */
     /* --- Orpurkel Farms Custom CSS --- */
     /* ----------------------------------- */
 
-    /* --- Base Styles & Typography --- */
-    :root {
-      --color-dark: #0b122b;
-      --color-primary: #12b76a; /* A vibrant green */
-      --color-secondary: #f4f7f5;
-      --color-light: #ffffff;
-      --color-text: #333;
-      --color-muted: #666;
+    :root{
+      --color-dark:#0b122b;
+      --color-primary:#12b76a;
+      --color-secondary:#f4f7f5;
+      --color-light:#ffffff;
+      --color-text:#222;
+      --color-muted:#6b7280;
       --font-inter: 'Inter', sans-serif;
-      --max-width: 1280px;
+      --max-width:1280px;
     }
 
-    *, *::before, *::after {
-      box-sizing: border-box;
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:var(--font-inter);
+      margin:0;
+      color:var(--color-text);
+      background:linear-gradient(180deg, #fbfdfb 0%, #ffffff 100%);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.6;
     }
 
-    html {
-      scroll-behavior: smooth;
+    .wrap{
+      max-width:var(--max-width);
+      margin:0 auto;
+      padding:0 1rem;
     }
 
-    body {
-      font-family: var(--font-inter);
-      line-height: 1.6;
-      color: var(--color-text);
-      background-color: var(--color-light);
-      margin: 0;
-      padding: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
+    h1,h2,h3,h4{margin:0 0 0.75rem 0; font-weight:700; color:var(--color-dark)}
+    p{margin:0 0 1rem 0}
+    .muted{color:var(--color-muted)}
+    .lead{font-size:1.15rem; font-weight:400; color:#0f1724}
+    .kicker{display:inline-block; font-weight:700; color:var(--color-primary); text-transform:uppercase; font-size:0.75rem; letter-spacing:0.12em; margin-bottom:0.75rem}
 
-    .wrap {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
+    img{max-width:100%;height:auto;display:block;border-radius:12px}
 
-    h1, h2, h3, h4, h5, h6 {
-      font-weight: 700;
-      line-height: 1.2;
-      color: var(--color-dark);
-      margin-top: 0;
-    }
+    /* Buttons */
+    .btn{display:inline-block;padding:0.75rem 1.5rem;border-radius:999px;text-decoration:none;font-weight:700;transition:all .2s ease}
+    .btn-primary{background:var(--color-dark);color:var(--color-light)}
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(11,18,43,0.18)}
+    .btn-secondary{background:var(--color-primary);color:#fff}
+    .btn-outline{background:transparent;color:var(--color-light);border:2px solid var(--color-light)}
 
-    h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
-    h2 { font-size: clamp(2rem, 4vw, 3rem); text-align: center; margin-bottom: 2rem; }
-    h3 { font-size: clamp(1.5rem, 3vw, 2rem); }
-    p { margin-bottom: 1.5rem; }
-    .lead { font-size: 1.25rem; font-weight: 300; line-height: 1.8; }
-    .muted { color: var(--color-muted); }
-    .small { font-size: 0.8rem; }
-    .kicker { display: block; font-weight: 700; color: var(--color-primary); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    /* Layout grids */
+    .section{padding:5rem 0}
+    .grid-2{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+    .grid-3{display:grid;grid-template-columns:1fr;gap:2rem}
+    .grid-4{display:grid;grid-template-columns:1fr;gap:2rem}
+    @media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}}
 
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 12px;
-    }
+    /* Cards */
+    .card{background:var(--color-secondary);padding:1.75rem;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.04)}
+    .card-plain{background:transparent;padding:0;border-radius:0;box-shadow:none}
 
-    /* --- Buttons & Links --- */
-    .btn-primary, .btn-secondary, .btn-outline {
-      display: inline-block;
-      padding: 0.8rem 2rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: 600;
-      text-align: center;
-      transition: all 0.3s ease;
-      border: 2px solid transparent;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
+    /* Header */
+    .site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.94);backdrop-filter:blur(6px);border-bottom:1px solid #eee}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+    .brand{display:flex;align-items:center;text-decoration:none;color:var(--color-dark)}
+    .logo{height:56px;margin-right:0.75rem;border-radius:10px;background:#f2f2f2;display:inline-flex;align-items:center;justify-content:center;padding:6px}
+    .brand-name{font-weight:800;font-size:1.25rem}
+    .brand-sub{font-size:0.85rem;color:var(--color-muted)}
 
-    .btn-primary {
-      background-color: var(--color-dark);
-      color: var(--color-light);
-    }
-    .btn-primary:hover {
-      background-color: #1e284a;
-      box-shadow: 0 6px 10px rgba(0,0,0,0.2);
-      transform: translateY(-2px);
-    }
-    .btn-secondary {
-      background-color: var(--color-primary);
-      color: var(--color-light);
-    }
-    .btn-secondary:hover {
-      background-color: #0d995c;
-      box-shadow: 0 6px 10px rgba(0,0,0,0.2);
-      transform: translateY(-2px);
-    }
-    .btn-outline {
-      background-color: transparent;
-      color: var(--color-light);
-      border-color: var(--color-light);
-    }
-    .btn-outline:hover {
-      background-color: var(--color-light);
-      color: var(--color-dark);
-    }
+    .nav{display:none}
+    .nav a{margin-left:1.25rem;text-decoration:none;color:var(--color-dark);font-weight:600}
+    @media(min-width:992px){.nav{display:flex;align-items:center}}
+    .nav-toggle{background:none;border:0;padding:0;cursor:pointer;display:flex;align-items:center}
 
-    /* --- Layouts & Sections --- */
-    .section {
-      padding: 6rem 0;
+    /* Hero */
+    .hero{
+      background-image: linear-gradient(rgba(11,18,43,0.66), rgba(11,18,43,0.66)), url('https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;background-position:center;color:var(--color-light);padding:8rem 0;text-align:center;
     }
+    .hero-inner{max-width:900px;margin:0 auto}
+    .hero h1{font-size:clamp(2.5rem,6vw,4rem);line-height:1.03}
+    .hero p{opacity:0.95}
 
-    .grid-2, .grid-3, .grid-4 {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      align-items: center;
-    }
+    /* Stats */
+    .stats{background:var(--color-dark);color:var(--color-light);padding:4rem 0;text-align:center}
+    .stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
+    @media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+    .stats-item h3{color:var(--color-primary);font-size:2.25rem;margin-bottom:0.25rem}
 
-    @media (min-width: 768px) {
-      .grid-2 {
-        grid-template-columns: repeat(2, 1fr);
-      }
-      .grid-3 {
-        grid-template-columns: repeat(3, 1fr);
-      }
-      .grid-4 {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
+    /* Products */
+    .products .card{text-align:center}
+    .products .card img{height:210px;object-fit:cover;border-radius:8px;margin-bottom:1rem}
 
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 1.5rem 0;
-    }
-    .list li {
-      position: relative;
-      padding-left: 28px;
-      margin-bottom: 1rem;
-    }
-    .list li::before {
-      content: "✓";
-      position: absolute;
-      left: 0;
-      color: var(--color-primary);
-      font-weight: 800;
-    }
+    /* Story */
+    .story-section{background:var(--color-secondary);padding:4rem 0}
+    .story-grid{display:grid;gap:2rem}
+    @media(min-width:992px){.story-grid{grid-template-columns:1fr 1fr}}
+    .story-grid-item{display:flex;flex-direction:column;gap:1rem}
 
-    .card {
-      background: var(--color-secondary);
-      padding: 2rem;
-      border-radius: 16px;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-    }
+    /* Gallery / Slick */
+    .gallery-carousel .slick-slide img{width:100%;height:360px;object-fit:cover;border-radius:8px}
+    .slick-prev:before, .slick-next:before { color: var(--color-primary) !important; font-size:2rem }
 
-    .card img {
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
+    /* Testimonials */
+    .testimonials .testimonial{padding:1.5rem;text-align:center}
+    .testimonial cite{display:block;font-weight:700;margin-top:0.75rem;color:var(--color-dark)}
 
-    /* --- Header & Navigation --- */
-    .site-header {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      padding: 1rem 0;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
+    /* CTA */
+    .cta{background-image: linear-gradient(rgba(11,18,43,0.85), rgba(11,18,43,0.85)), url('https://images.unsplash.com/photo-1533221060936-e04f4c8037a5?q=80&w=1600&auto=format&fit=crop'); background-size:cover;padding:4rem 0;color:var(--color-light);text-align:center}
 
-    .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    /* Contact form */
+    .contact-form{display:grid;gap:1rem;background:#fff;padding:2rem;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+    .contact-form input, .contact-form textarea { width:100%;padding:0.85rem;border:1px solid #e6e6e6;border-radius:8px;font-family:var(--font-inter); }
+    .contact-form input:focus, .contact-form textarea:focus { outline:none;border-color:var(--color-primary);box-shadow:0 6px 20px rgba(18,183,106,0.08) }
 
-    .brand {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: var(--color-dark);
-    }
+    /* Footer */
+    .site-footer{background:var(--color-dark);color:var(--color-light);padding:3rem 0;border-top:5px solid var(--color-primary);text-align:center}
+    .footer-nav a{color:var(--color-light);text-decoration:none;margin:0 0.5rem}
+    .social-links img{width:36px;height:36px;border-radius:8px}
 
-    .logo {
-      height: 48px;
-      margin-right: 0.75rem;
-    }
+    /* Utilities */
+    .text-center{text-align:center}
+    .muted-small{color:var(--color-muted);font-size:0.9rem}
+    .pill{display:inline-block;padding:0.35rem 0.9rem;border-radius:999px;background:#edf7ee;font-weight:700;color:var(--color-primary);font-size:0.85rem}
 
-    .brand-name {
-      font-weight: 800;
-      font-size: 1.5rem;
-    }
-
-    .brand-sub {
-      font-size: 0.9rem;
-      color: var(--color-muted);
-    }
-
-    .nav {
-      display: none;
-    }
-
-    .nav a {
-      text-decoration: none;
-      color: var(--color-dark);
-      font-weight: 600;
-      margin-left: 1.5rem;
-      transition: color 0.3s ease;
-    }
-
-    .nav a:hover, .nav a.active {
-      color: var(--color-primary);
-    }
-
-    .nav-toggle {
-      display: block;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
-
-    .hamburger {
-      display: block;
-      width: 30px;
-      height: 3px;
-      background: var(--color-dark);
-      position: relative;
-      transition: all 0.3s ease;
-    }
-
-    .hamburger::before, .hamburger::after {
-      content: "";
-      display: block;
-      width: 30px;
-      height: 3px;
-      background: var(--color-dark);
-      position: absolute;
-      left: 0;
-      transition: transform 0.3s ease, top 0.3s ease;
-    }
-
-    .hamburger::before { top: -10px; }
-    .hamburger::after { top: 10px; }
-
-    @media (min-width: 992px) {
-      .nav {
-        display: flex;
-        align-items: center;
-      }
-      .nav-toggle {
-        display: none;
-      }
-    }
-
-    .nav-open {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      background: var(--color-light);
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-      border-top: 1px solid #ddd;
-    }
-
-    .nav-open a {
-      padding: 1.5rem;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-      margin: 0;
-    }
-
-    /* --- Hero Section --- */
-    .hero {
-      background-color: var(--color-dark);
-      background-image: linear-gradient(rgba(11, 18, 43, 0.8), rgba(11, 18, 43, 0.8)), url('https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1600&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      color: var(--color-light);
-      padding: 8rem 0;
-      text-align: center;
-    }
-
-    .hero h1 {
-      color: var(--color-light);
-      font-size: clamp(3rem, 6vw, 4.5rem);
-      font-weight: 800;
-      max-width: 800px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .hero p.lead {
-      max-width: 900px;
-      margin: 0 auto 2.5rem;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    /* --- Products Section --- */
-    .products .card {
-      text-align: center;
-    }
-    .products .card img {
-      height: 250px;
-      object-fit: cover;
-    }
-
-    /* --- Story Section --- */
-    .story-section {
-      background-color: var(--color-secondary);
-      padding: 6rem 0;
-    }
-    .story-section h2 {
-      margin-bottom: 3rem;
-    }
-    .story-grid {
-      display: grid;
-      gap: 3rem;
-    }
-    .story-grid img {
-      height: 400px;
-      object-fit: cover;
-      width: 100%;
-    }
-    .story-grid-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-    @media (min-width: 992px) {
-      .story-grid-item {
-        flex-direction: row;
-        align-items: center;
-      }
-      .story-grid-item:nth-child(even) {
-        flex-direction: row-reverse;
-      }
-    }
-
-    /* --- Stats Section --- */
-    .stats {
-      background-color: var(--color-dark);
-      color: var(--color-light);
-      text-align: center;
-    }
-    .stats-item h3 {
-      color: var(--color-primary);
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      font-weight: 800;
-      margin: 0 0 0.5rem;
-      line-height: 1;
-    }
-    .stats-item p {
-      font-size: 1.25rem;
-      font-weight: 300;
-      color: #b0b0b0;
-    }
-
-    /* --- Gallery & Carousel --- */
-    .gallery-carousel .slick-slide img {
-      width: 100%;
-      height: 400px;
-      object-fit: cover;
-      border-radius: 8px;
-    }
-
-    .slick-prev:before, .slick-next:before {
-      color: var(--color-primary) !important;
-      font-size: 2rem;
-    }
-
-    .video-container {
-      margin-top: 3rem;
-      text-align: center;
-    }
-    .video-container iframe {
-      width: 100%;
-      max-width: 900px;
-      height: 450px;
-      border-radius: 12px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-    @media (max-width: 768px) {
-      .video-container iframe {
-        height: 250px;
-      }
-    }
-
-    /* --- Testimonials --- */
-    .testimonials {
-      background-color: var(--color-secondary);
-    }
-    .testimonial {
-      text-align: center;
-      padding: 2rem;
-    }
-    .testimonial blockquote {
-      font-style: italic;
-      font-size: 1.15rem;
-      margin: 0 0 1rem;
-      position: relative;
-    }
-    .testimonial blockquote::before {
-      content: '“';
-      font-size: 4rem;
-      line-height: 0;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      color: var(--color-primary);
-      opacity: 0.3;
-      z-index: 1;
-    }
-    .testimonial cite {
-      display: block;
-      font-weight: 600;
-      color: var(--color-dark);
-    }
-
-    /* --- Call to Action Section --- */
-    .cta {
-      background-image: linear-gradient(rgba(11, 18, 43, 0.9), rgba(11, 18, 43, 0.9)), url('https://images.unsplash.com/photo-1533221060936-e04f4c8037a5?q=80&w=1600&auto=format&fit=crop');
-      background-size: cover;
-      background-position: center;
-      color: var(--color-light);
-      text-align: center;
-    }
-    .cta h2 {
-      color: var(--color-light);
-      margin-bottom: 1.5rem;
-    }
-
-    /* --- Contact Form Section --- */
-    .contact-form {
-      display: grid;
-      gap: 1.5rem;
-      background: var(--color-light);
-      padding: 3rem;
-      border-radius: 16px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-
-    .contact-form label {
-      display: block;
-    }
-
-    .contact-form .label {
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-      display: block;
-      color: var(--color-dark);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      font-family: var(--font-inter);
-      background-color: #f9f9f9;
-      transition: border-color 0.3s ease;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: var(--color-primary);
-    }
-
-    /* --- Footer --- */
-    .site-footer {
-      background-color: var(--color-dark);
-      color: var(--color-light);
-      padding: 4rem 0;
-      text-align: center;
-      border-top: 5px solid var(--color-primary);
-    }
-
-    .footer-inner {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .footer-nav {
-      display: flex;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .footer-nav a {
-      color: var(--color-light);
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .footer-nav a:hover {
-      color: var(--color-primary);
-    }
-
-    .social-links {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .social-links a {
-      color: var(--color-light);
-      font-size: 1.75rem;
-      transition: color 0.3s ease, transform 0.3s ease;
-    }
-    .social-links a:hover {
-      color: var(--color-primary);
-      transform: scale(1.1);
-    }
+    /* FAQ styles */
+    .faq-item{border-bottom:1px solid #eee;padding:1rem 0}
+    .faq-question{cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height .28s ease;padding-top:0}
+    .faq-answer.open{max-height:400px;padding-top:0.5rem}
   </style>
 </head>
 <body>
 
-  <!-- ----------------------------------- -->
-  <!-- --- Page Content Starts Here --- -->
-  <!-- ----------------------------------- -->
-
-  <!-- Header & Navigation -->
+  <!-- Header -->
   <header class="site-header">
     <div class="wrap header-inner">
       <a class="brand" href="#top" aria-label="Orpurkel Farms Home">
-        <img src="https://placehold.co/64x64/333/fff?text=OF" class="logo" alt="Orpurkel Farms logo" />
-        <div class="brand-text">
+        <div class="logo" aria-hidden="true">
+          <img src="https://placehold.co/64x64/333/fff?text=OF" alt="Orpurkel Farms logo" style="height:48px;border-radius:8px"/>
+        </div>
+        <div>
           <div class="brand-name">Orpurkel Farms Ltd</div>
-          <div class="brand-sub">Kajiado South, Kenya</div>
+          <div class="brand-sub">Imbirikani, Kajiado South, Kenya</div>
         </div>
       </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
+
       <nav class="nav" aria-label="Main navigation">
         <a href="#about">About</a>
         <a href="#products">Products</a>
         <a href="#story">Our Story</a>
         <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Clients</a>
-        <a href="#contact" class="btn-primary">Get a Quote</a>
+        <a href="#sustainability">Impact</a>
+        <a href="#contact" class="btn btn-primary" style="margin-left:1rem">Get a Quote</a>
       </nav>
+
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span class="hamburger" style="display:inline-block;width:30px;height:3px;background:var(--color-dark);position:relative"></span>
+      </button>
+    </div>
+
+    <!-- Mobile nav (hidden on desktop) -->
+    <div id="mobileNav" style="display:none;border-top:1px solid #eee;background:white">
+      <div class="wrap" style="padding:1rem 0;">
+        <a href="#about" onclick="toggleNav()">About</a><br/>
+        <a href="#products" onclick="toggleNav()">Products</a><br/>
+        <a href="#story" onclick="toggleNav()">Our Story</a><br/>
+        <a href="#gallery" onclick="toggleNav()">Gallery</a><br/>
+        <a href="#contact" class="btn btn-primary" onclick="toggleNav()">Contact</a>
+      </div>
     </div>
   </header>
 
   <main id="top">
-    <!-- Hero Section -->
-    <section class="hero">
-      <div class="wrap">
+    <!-- HERO -->
+    <section class="hero" role="region" aria-label="Hero - Orpurkel Farms">
+      <div class="wrap hero-inner">
         <span class="kicker">Fresh • Traceable • Sustainable</span>
-        <h1>Orpurkel Farms Ltd: Where the Wilderness Blooms.</h1>
-        <p class="lead">Our name, Orpurkel, means "wilderness" in Maasai—a nod to the rugged land we call home in Kajiado South. But with the life-giving flow of the Nolturesh Water Pipeline, we've transformed this arid landscape. We've bridged the "wilderness" with the "farm," cultivating a new future of abundance and sustainability.</p>
-        <div class="hero-actions">
-          <a href="#products" class="btn-secondary">Explore Products</a>
-          <a href="#contact" class="btn-outline">Order Now</a>
+        <h1>Orpurkel Farms Ltd — Where the Wilderness Blooms</h1>
+        <p class="lead">From the arid landscapes of Imbirikani, Kajiado South, we've transformed wilderness to abundance using reliable water, modern greenhouses, regenerative compost and ethical dairy farming. We supply hotels, schools and retailers in Nairobi with traceable, premium produce.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+          <a class="btn btn-secondary" href="#products">Explore Products</a>
+          <a class="btn btn-primary" href="#contact">Order Now</a>
+          <a class="btn" style="background:transparent;border:2px solid #fff;color:#fff" href="#story">Our Story</a>
+        </div>
+
+        <!-- Quick trust badges -->
+        <div style="display:flex;gap:0.75rem;justify-content:center;margin-top:2rem;flex-wrap:wrap">
+          <span class="pill">KDB-Compliant Dairy</span>
+          <span class="pill">Integrated Pest Management</span>
+          <span class="pill">Regenerative Composting</span>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About -->
     <section id="about" class="section">
       <div class="wrap grid-2">
         <div>
           <h2>About Orpurkel Farms</h2>
-          <p class="muted">Orpurkel Farms is a leading agricultural enterprise committed to modern, sustainable farming practices. Our mission is to provide Nairobi's top hotels, restaurants, schools, and retailers with a consistent supply of safe, healthy, and flavorful produce. We operate with a deep respect for our land and community.</p>
-          <ul class="list">
-            <li><strong>Our Location:</strong> Imbirikani, Kajiado South, Kenya</li>
-            <li><strong>Our Resources:</strong> Reliable piped water, fertile and well-managed soils</li>
-            <li><strong>Our Promise:</strong> High-quality, traceable produce, every time</li>
-            <li><strong>Our Mission:</strong> To be a pillar of sustainable agriculture and community development</li>
+          <p class="muted">Orpurkel (meaning "wilderness" in Maasai) is a modern agricultural enterprise in Imbirikani. With access to the Nolturesh Water Pipeline, we cultivate greenhouse vegetables, manage an ethical dairy herd, and produce quality compost — all while investing in local jobs and skills.</p>
+
+          <ul class="list" style="margin-top:1rem">
+            <li><strong>Location:</strong> Imbirikani, Kajiado South</li>
+            <li><strong>Scale:</strong> 2 modern greenhouses, open fields, dairy unit</li>
+            <li><strong>Markets:</strong> Nairobi hotels, restaurants, schools, retailers</li>
+            <li><strong>Practices:</strong> IPM, fertigation, compost-based fertilization</li>
           </ul>
+
+          <h3 style="margin-top:1.5rem">What Makes Us Different</h3>
+          <p class="muted">Traceability, ethical livestock care, disciplined record-keeping, and a commitment to soil health. We partner with local communities to create value and improve livelihoods.</p>
         </div>
         <div>
-          <img src="https://images.unsplash.com/photo-1594950438318-68812c3f15c7?q=80&w=1200&auto=format&fit=crop" alt="The beautiful landscape of Kajiado" />
+          <img src="https://images.unsplash.com/photo-1594950438318-68812c3f15c7?q=80&w=1200&auto=format&fit=crop" alt="Farmers working in a greenhouse at Orpurkel Farms" />
+          <figcaption class="muted-small" style="margin-top:0.5rem">Greenhouse team planting seedlings at Orpurkel Farms</figcaption>
         </div>
       </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="stats section">
-      <div class="wrap grid-4">
-        <div class="stats-item">
-          <h3>2</h3>
-          <p>Modern Greenhouses</p>
-        </div>
-        <div class="stats-item">
-          <h3>30+</h3>
-          <p>Tons of Compost Per Year</p>
-        </div>
-        <div class="stats-item">
-          <h3>150+</h3>
-          <p>Happy Clients</p>
-        </div>
-        <div class="stats-item">
-          <h3>20+</h3>
-          <p>Direct Jobs Created</p>
+    <!-- Expanded STATS -->
+    <section class="stats">
+      <div class="wrap">
+        <div style="max-width:1100px;margin:0 auto">
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem">
+            <div style="flex:1;min-width:180px;padding:1rem">
+              <h3 style="font-size:1.5rem;color:#fff;margin-bottom:0.25rem">2</h3>
+              <p class="muted-small" style="color:#d0d4da">Modern Greenhouses</p>
+            </div>
+            <div style="flex:1;min-width:180px;padding:1rem">
+              <h3 style="font-size:1.5rem;color:#fff;margin-bottom:0.25rem">30+</h3>
+              <p class="muted-small" style="color:#d0d4da">Tons of Compost / Year</p>
+            </div>
+            <div style="flex:1;min-width:180px;padding:1rem">
+              <h3 style="font-size:1.5rem;color:#fff;margin-bottom:0.25rem">150+</h3>
+              <p class="muted-small" style="color:#d0d4da">Satisfied Clients</p>
+            </div>
+            <div style="flex:1;min-width:180px;padding:1rem">
+              <h3 style="font-size:1.5rem;color:#fff;margin-bottom:0.25rem">20+</h3>
+              <p class="muted-small" style="color:#d0d4da">Direct Jobs</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- PRODUCTS (expanded, more images + details) -->
     <section id="products" class="section products">
       <div class="wrap">
-        <h2>Our Products</h2>
-        <p class="lead muted" style="text-align: center;">We specialize in cultivating premium produce through controlled, regenerative, and ethical farming methods.</p>
-        <div class="grid-4">
+        <h2 style="text-align:center;margin-bottom:1rem">Our Products</h2>
+        <p class="lead muted" style="text-align:center;max-width:900px;margin:0 auto 2rem">We provide high-quality greenhouse vegetables, field crops, and dairy — all traceable from seed to delivery. Below are our core products and available packaging options.</p>
+
+        <div class="grid-4" style="margin-top:2rem">
+          <!-- Tomatoes -->
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1200&auto=format&fit=crop" alt="Fresh tomatoes" />
+            <img src="https://images.unsplash.com/photo-1605522601118-30fc4030b5d5?q=80&w=1200&auto=format&fit=crop" alt="Juicy greenhouse-grown tomatoes on the vine" />
             <h3>Greenhouse Tomatoes</h3>
-            <p class="muted">Juicy, flavorful tomatoes grown with precision fertigation and IPM for superior quality and extended shelf life.</p>
+            <p class="muted">Precision-grown tomatoes using fertigation and IPM for consistent size, color, and flavor. Available in 5kg, 10kg and bulk crates.</p>
+            <p style="font-weight:700;margin-top:0.5rem">Typical Pricing: KES 200 - 280 / kg (bulk discounts available)</p>
           </article>
+
+          <!-- Capsicum -->
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1200&auto=format&fit=crop" alt="Colorful capsicum" />
+            <img src="https://images.unsplash.com/photo-1615485299990-7d3ac9ec73f1?q=80&w=1200&auto=format&fit=crop" alt="Red, yellow and green capsicum freshly harvested" />
             <h3>Colored Capsicum</h3>
-            <p class="muted">Vibrant red, yellow, and green capsicum, harvested at peak ripeness for maximum crunch and flavor.</p>
+            <p class="muted">Vibrant bell peppers harvested at peak ripeness for hotels and retailers who demand premium presentation.</p>
+            <p style="font-weight:700;margin-top:0.5rem">Pack sizes: 6kg trays, 10kg boxes</p>
           </article>
+
+          <!-- Onions -->
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1579294246473-0498305c6d37?q=80&w=1200&auto=format&fit=crop" alt="Farm-fresh onions" />
+            <img src="https://images.unsplash.com/photo-1603052875225-7d1f5aaecf66?q=80&w=1200&auto=format&fit=crop" alt="Stack of farm-fresh onions" />
             <h3>Premium Onions</h3>
-            <p class="muted">Our onions are known for their firm texture and pungent flavor, perfect for cooking, grown in open fields with rich compost.</p>
+            <p class="muted">Firm, long-storing onions grown in well-composted soils for robust flavor and shelf life. Available loose or pre-packed.</p>
+            <p style="font-weight:700;margin-top:0.5rem">Ideal for bulk kitchens and processing</p>
           </article>
+
+          <!-- Dairy -->
           <article class="card">
-            <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=1200&auto=format&fit=crop" alt="Fresh dairy milk" />
+            <img src="https://images.unsplash.com/photo-1599058917212-708279f73d1a?q=80&w=1200&auto=format&fit=crop" alt="Fresh dairy milk in glass bottles" />
             <h3>Fresh Dairy Milk</h3>
-            <p class="muted">Sourced from our Friesian and Ayrshire cows, our milk is delivered chilled, fresh, and KDB-compliant.</p>
+            <p class="muted">Milk from Friesian and Ayrshire cows, handled with KDB-compliant hygiene & chilling. We can supply daily batches for institutional customers.</p>
+            <p style="font-weight:700;margin-top:0.5rem">Delivery: chilled bulk or bottled options</p>
+          </article>
+        </div>
+
+        <!-- More products row -->
+        <div class="grid-4" style="margin-top:2rem">
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1547394765-7afe08c9cc3d?q=80&w=1200&auto=format&fit=crop" alt="Fresh herbs like basil and coriander in bunches" />
+            <h3>Fresh Herbs</h3>
+            <p class="muted">Basil, coriander, parsley and more — great for hotels and restaurants that require fresh aromatics.</p>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1546525848-3ce03ca516f6?q=80&w=1200&auto=format&fit=crop" alt="Bulk compost being piled" />
+            <h3>Regenerative Compost</h3>
+            <p class="muted">Compost made from dairy manure and plant residues to enrich soil health and increase yields.</p>
+            <p class="muted small">Available by the bag or bulk truckload.</p>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1532074205216-d0e1f5ed3a92?q=80&w=1200&auto=format&fit=crop" alt="Crops in a shaded nursery" />
+            <h3>Seedlings & Nursery Plants</h3>
+            <p class="muted">Healthy seedlings grown in our nursery — perfect for farmers and schools.</p>
+          </article>
+
+          <article class="card">
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=1200&auto=format&fit=crop" alt="Crates of mixed vegetables ready for distribution" />
+            <h3>Custom Packs & Supply Contracts</h3>
+            <p class="muted">We offer tailored weekly supply contracts and bulk packing for hotels and institutions.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Our Story Section -->
-    <section id="story" class="story-section">
+    <!-- Story -->
+    <section id="story" class="story-section section">
       <div class="wrap">
-        <h2>Our Sustainable Story</h2>
-        <div class="story-grid">
-          <div class="story-grid-item">
-            <div>
+        <h2 style="text-align:center;margin-bottom:1rem">Our Sustainable Story</h2>
+        <p class="muted" style="text-align:center;max-width:900px;margin:0 auto 2rem">We combine modern greenhouse systems with community-centred regenerative agriculture. Below are the pillars of our approach.</p>
+
+        <div class="story-grid" style="gap:2.5rem">
+          <div class="story-grid-item card-plain" style="display:flex;gap:1.5rem;align-items:center">
+            <div style="flex:1">
               <h3>Greenhouse Excellence</h3>
-              <p class="muted">Our two modern greenhouses are the heart of our vegetable production. Here, we meticulously control environmental factors, ensuring our tomatoes and capsicum are grown under optimal conditions, free from common pests and diseases. We use an integrated pest management (IPM) system to reduce chemical use, relying on natural predators and barriers.</p>
-              <img src="https://images.unsplash.com/photo-1518385617300-47b29388147d?q=80&w=1200&auto=format&fit=crop" alt="Inside a modern greenhouse with tomato plants" />
+              <p class="muted">Our greenhouses are designed for climate control, efficient water use and integrated pest management. This ensures superior tomato and capsicum yields year-round.</p>
+              <ul class="list">
+                <li>Climate control & shade management</li>
+                <li>Automated fertigation (micro-dosing)</li>
+                <li>Biological pest control and IPM</li>
+              </ul>
+            </div>
+            <div style="flex:1">
+              <img src="https://images.unsplash.com/photo-1518385617300-47b29388147d?q=80&w=1200&auto=format&fit=crop" alt="Rows of tomato plants inside a modern greenhouse" />
             </div>
           </div>
-          <div class="story-grid-item">
-            <div>
+
+          <div class="story-grid-item card-plain" style="display:flex;gap:1.5rem;align-items:center">
+            <div style="flex:1">
+              <img src="https://images.unsplash.com/photo-1579549929255-a50d276b63ef?q=80&w=1200&auto=format&fit=crop" alt="A large compost heap being turned by workers" />
+            </div>
+            <div style="flex:1">
               <h3>From Compost to Crops</h3>
-              <p class="muted">Regenerative agriculture is central to our philosophy. We use manure from our dairy cows, combined with crop residues, to create nutrient-rich compost. This natural fertilizer enriches our soil, improves water retention, and reduces our dependency on chemical inputs, leading to healthier, more flavorful produce.</p>
-              <img src="https://images.unsplash.com/photo-1579549929255-a50d276b63ef?q=80&w=1200&auto=format&fit=crop" alt="A large compost heap on the farm" />
+              <p class="muted">We convert dairy manure and crop residues into rich compost that feeds our soils, reduces reliance on synthetic fertilizers, and improves water retention.</p>
+              <p class="muted">Compost is tested periodically to ensure nutrient balance and safety.</p>
             </div>
           </div>
-          <div class="story-grid-item">
-            <div>
+
+          <div class="story-grid-item card-plain" style="display:flex;gap:1.5rem;align-items:center">
+            <div style="flex:1">
               <h3>Ethical Dairy Farming</h3>
-              <p class="muted">Our dairy cows are a key part of our sustainable ecosystem. Managed with care and ethical practices, they provide us with a consistent supply of high-quality milk. We optimize their feed with hydroponic fodder, ensuring their health and maximizing milk yield while using minimal water.</p>
-              <img src="https://images.unsplash.com/photo-1627807218671-558e6e5a49b2?q=80&w=1200&auto=format&fit=crop" alt="A herd of Friesian cows grazing in Kajiado" />
+              <p class="muted">Our Friesian and Ayrshire herd is managed with humane practices, balanced feeding (hydroponic fodder where applicable), and regular veterinary care to ensure milk quality and animal welfare.</p>
+              <img src="https://images.unsplash.com/photo-1627807218671-558e6e5a49b2?q=80&w=1200&auto=format&fit=crop" alt="Friesian cows grazing in Kajiado" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Video Section -->
-    <section id="video" class="section">
+    <!-- Video + Farm Tour -->
+    <section class="section">
       <div class="wrap">
-        <h2>See Our Farms in Action</h2>
-        <div class="video-container">
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/krxsJnn00GE" title="Tomato Farming in Kenya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p class="muted small" style="margin-top: 1rem;">Video: A glimpse into tomato farming in Kenya and the potential it holds.</p>
+        <h2 style="text-align:center;margin-bottom:1rem">See the Farm</h2>
+        <p class="muted" style="text-align:center;max-width:900px;margin:0 auto 1.5rem">Watch a short tour highlighting our greenhouses, dairy unit, and compost operations.</p>
+        <div class="video-container" style="text-align:center">
+          <iframe width="100%" height="450" src="https://www.youtube.com/embed/krxsJnn00GE" title="Tomato Farming and Greenhouse Tour" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="max-width:1000px;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,0.08)"></iframe>
         </div>
       </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery -->
     <section id="gallery" class="section">
       <div class="wrap">
-        <h2>A Glimpse of Our Farm</h2>
+        <h2 style="text-align:center;margin-bottom:1rem">Gallery — A Glimpse of Our Farm</h2>
+        <p class="muted" style="text-align:center;max-width:900px;margin:0 auto 1.5rem">Photos of our greenhouses, harvests, team and the community we serve.</p>
+
         <div class="gallery-carousel">
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1200&auto=format&fit=crop" alt="Exterior view of a greenhouse" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1594950438318-68812c3f15c7?q=80&w=1200&auto=format&fit=crop" alt="Farmers working in a tomato field in Kajiado" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1563721345997-7e9b062534f3?q=80&w=1200&auto=format&fit=crop" alt="Friesian cows on the farm" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/18330129/pexels-photo-18330129.jpeg?q=80&w=1200&auto=format&fit=crop" alt="A farmer harvesting ripe tomatoes" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1518385617300-47b29388147d?q=80&w=1200&auto=format&fit=crop" alt="Inside the greenhouse, rows of tomatoes" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1200&auto=format&fit=crop" alt="Colorful capsicum ready for harvest" />
-          </div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1600&auto=format&fit=crop" alt="Exterior of greenhouse at sunrise"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1598454446638-2c0c4f74ac9a?q=80&w=1600&auto=format&fit=crop" alt="Community workers harvesting tomatoes"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563721345997-7e9b062534f3?q=80&w=1600&auto=format&fit=crop" alt="Friesian cows grazing in a paddock"></div>
+          <div class="gallery-item"><img src="https://images.pexels.com/photos/18330129/pexels-photo-18330129.jpeg?q=80&w=1600&auto=format&fit=crop" alt="Farm worker carrying crates of produce"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1518385617300-47b29388147d?q=80&w=1600&auto=format&fit=crop" alt="Inside view of greenhouse rows of tomatoes"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1600&auto=format&fit=crop" alt="Colorful capsicum on harvesting table"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1563201517-7f6f3a85d0c8?q=80&w=1600&auto=format&fit=crop" alt="Packing crates for delivery"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1524594154909-2d2de4b24cc3?q=80&w=1600&auto=format&fit=crop" alt="Community members at a farm training workshop"></div>
         </div>
       </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section id="testimonials" class="section testimonials">
       <div class="wrap">
-        <h2>What Our Clients Say</h2>
+        <h2 style="text-align:center;margin-bottom:1rem">What Our Clients Say</h2>
         <div class="grid-3">
           <div class="card testimonial">
             <blockquote>"Orpurkel Farms consistently delivers fresh and high-quality produce. Their tomatoes and onions are a staple in our kitchen. The traceability is a huge plus."</blockquote>
             <cite>— Chef Alex Mutua, The Grand Nairobi Hotel</cite>
           </div>
+
           <div class="card testimonial">
             <blockquote>"We've been sourcing milk from Orpurkel for our school's feeding program. The quality is excellent, and their commitment to hygiene and reliable delivery is unmatched."</blockquote>
             <cite>— Mrs. Wanjiku, Headmistress, Imbirikani Academy</cite>
           </div>
+
           <div class="card testimonial">
             <blockquote>"The compost from Orpurkel has transformed our small farm. The soil is richer, and our crops have never looked healthier. It’s a sustainable solution that truly works."</blockquote>
             <cite>— John Ole Kasi, Local Farmer</cite>
@@ -759,153 +455,323 @@
       </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta section">
+    <!-- DELIVERY, LOGISTICS & PRICING (expanded) -->
+    <section id="delivery" class="section">
       <div class="wrap">
-        <h2>Ready to Partner with Us?</h2>
-        <p class="lead">Join a growing list of hotels, schools, and retailers who trust Orpurkel Farms for premium, farm-fresh produce. Contact us today to place your order or schedule a farm tour.</p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn-secondary">Request a Quote</a>
+        <h2 style="text-align:center;margin-bottom:1rem">Delivery & Pricing</h2>
+        <p class="muted" style="text-align:center;max-width:900px;margin:0 auto 1.5rem">Flexible delivery options across Nairobi and selected satellite towns. We offer contract supply and one-off deliveries for events or peak demand.</p>
+
+        <div class="grid-2" style="gap:2rem">
+          <div class="card">
+            <h3>Delivery Options</h3>
+            <ul class="list">
+              <li><strong>Standard:</strong> Next-day delivery to Nairobi (order by 3pm)</li>
+              <li><strong>Scheduled:</strong> Weekly fixed-day deliveries for hotels/schools</li>
+              <li><strong>Bulk:</strong> Truckload deliveries for retailers and processors</li>
+              <li><strong>Farm Tours & Pickup:</strong> By appointment</li>
+            </ul>
+            <p class="muted-small">Note: For reliable supply, we recommend weekly contracts for core items.</p>
+          </div>
+
+          <div class="card">
+            <h3>Sample Price Matrix (Indicative)</h3>
+            <table style="width:100%;border-collapse:collapse">
+              <thead>
+                <tr>
+                  <th style="text-align:left;padding:0.5rem;border-bottom:1px solid #eee">Product</th>
+                  <th style="text-align:left;padding:0.5rem;border-bottom:1px solid #eee">Pack</th>
+                  <th style="text-align:left;padding:0.5rem;border-bottom:1px solid #eee">Indicative Price (KES)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">Greenhouse Tomatoes</td><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">10kg crate</td><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">2,300 - 2,800</td></tr>
+                <tr><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">Colored Capsicum</td><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">6kg tray</td><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">1,800 - 2,400</td></tr>
+                <tr><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">Onions</td><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">50kg bag</td><td style="padding:0.5rem;border-bottom:1px solid #f1f1f1">3,000 - 4,000</td></tr>
+                <tr><td style="padding:0.5rem">Fresh Milk</td><td style="padding:0.5rem">Bulk daily</td><td style="padding:0.5rem">Contact for rates</td></tr>
+              </tbody>
+            </table>
+            <p class="muted-small" style="margin-top:0.75rem">Prices are indicative and subject to seasonal changes. Contact us for a formal quote and volume discounts.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Form Section -->
-    <section id="contact" class="section">
+    <!-- TEAM -->
+    <section id="team" class="section">
+      <div class="wrap">
+        <h2 style="text-align:center;margin-bottom:1rem">Meet the Team</h2>
+        <p class="muted" style="text-align:center;max-width:900px;margin:0 auto 1.5rem">A small, skilled team combining agricultural expertise and local knowledge.</p>
+
+        <div class="grid-3">
+          <div class="card" style="text-align:center">
+            <img src="https://images.unsplash.com/photo-1545996124-1b6b8b3176d9?q=80&w=800&auto=format&fit=crop" alt="Farm manager portrait" style="border-radius:50%;width:120px;height:120px;object-fit:cover;margin:0 auto 0.75rem"/>
+            <h4>Andrew Mogaka</h4>
+            <p class="muted-small">Lead — Farm operations & finance (CPAK). Coordinates supply to institutional clients and leads production planning.</p>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=800&auto=format&fit=crop" alt="Horticulture lead portrait" style="border-radius:50%;width:120px;height:120px;object-fit:cover;margin:0 auto 0.75rem"/>
+            <h4>Sarah N.</h4>
+            <p class="muted-small">Horticulture Lead — Greenhouse management and IPM specialist.</p>
+          </div>
+
+          <div class="card" style="text-align:center">
+            <img src="https://images.unsplash.com/photo-1559767946-92f7b5ed376d?q=80&w=800&auto=format&fit=crop" alt="Dairy manager portrait" style="border-radius:50%;width:120px;height:120px;object-fit:cover;margin:0 auto 0.75rem"/>
+            <h4>James K.</h4>
+            <p class="muted-small">Dairy Manager — Animal welfare, milk handling and quality assurance.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS & PARTNERS -->
+    <section id="cred" class="section" style="background:#fff">
+      <div class="wrap">
+        <h2 style="text-align:center;margin-bottom:1rem">Certifications & Partners</h2>
+        <p class="muted" style="text-align:center;max-width:900px;margin:0 auto 1.5rem">We work to meet regulatory standards and partner with local organizations for training and market access.</p>
+
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+          <img src="https://placehold.co/120x60/efefef/333?text=KDB" alt="KDB logo placeholder" style="border-radius:8px;padding:0.5rem;background:#fff"/>
+          <img src="https://placehold.co/120x60/efefef/333?text=ICPAK" alt="Industry partner placeholder" style="border-radius:8px;padding:0.5rem;background:#fff"/>
+          <img src="https://placehold.co/120x60/efefef/333?text=Local+NGO" alt="Partner logo placeholder" style="border-radius:8px;padding:0.5rem;background:#fff"/>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sustainability / Impact -->
+    <section id="sustainability" class="section">
+      <div class="wrap">
+        <h2 style="text-align:center;margin-bottom:1rem">Sustainability & Impact</h2>
+        <p class="muted" style="text-align:center;max-width:900px;margin:0 auto 1.5rem">Our approach reduces chemical inputs, restores soil carbon and creates stable livelihoods.</p>
+
+        <div class="grid-3">
+          <div class="card">
+            <h3>Regenerative Practices</h3>
+            <p class="muted">Composting, rotational cropping and soil testing reduce erosion and improve fertility.</p>
+          </div>
+
+          <div class="card">
+            <h3>Water Stewardship</h3>
+            <p class="muted">Efficient drip irrigation and hydroponic fodder systems reduce water usage per kg of product.</p>
+          </div>
+
+          <div class="card">
+            <h3>Community Programs</h3>
+            <p class="muted">Training, seasonal employment and buy-back schemes support local livelihoods.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section">
+      <div class="wrap" style="max-width:900px;margin:0 auto">
+        <h2 style="text-align:center;margin-bottom:1rem">Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <strong>How do I place an order?</strong>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="muted">Use the contact form below, email <a href="mailto:info@orpurkelfarms.com">info@orpurkelfarms.com</a>, or WhatsApp +254 112 944 092. For regular supply, request a weekly contract quote.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <strong>Do you deliver to Nairobi?</strong>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="muted">Yes — daily deliveries to Nairobi and scheduled routes for neighboring towns. Bulk deliveries by arrangement.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFAQ(this)">
+            <strong>Are your products safe for schools?</strong>
+            <span>+</span>
+          </div>
+          <div class="faq-answer">
+            <p class="muted">Yes. We maintain hygiene and cold-chain procedures for dairy and follow IPM and responsible pesticide use for produce. We also provide certificates on request for institutional buyers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact + Map + Form -->
+    <section id="contact" class="section" style="background:#f8faf8">
       <div class="wrap grid-2">
         <div>
           <h2>Contact Us</h2>
-          <p class="muted">We are always happy to discuss our products, farming methods, and how we can best meet your needs. We offer flexible delivery schedules and custom quotes for bulk orders.</p>
+          <p class="muted">We're happy to discuss supply, pricing, or schedule a visit. Use the form to request a quote or call/WhatsApp us directly.</p>
+
           <ul class="list">
             <li><strong>Email:</strong> <a href="mailto:info@orpurkelfarms.com">info@orpurkelfarms.com</a></li>
             <li><strong>Phone:</strong> <a href="tel:+254112944092">+254 112 944 092</a></li>
             <li><strong>WhatsApp:</strong> <a href="https://wa.me/254112944092" target="_blank">+254 112 944 092</a></li>
             <li><strong>Location:</strong> Imbirikani, Kajiado South, Kenya</li>
           </ul>
+
+          <h3 style="margin-top:1.5rem">Visit the Farm</h3>
+          <p class="muted">We welcome scheduled farm tours for buyers and partners. Please contact us to arrange a day and transport.</p>
+
+          <div style="margin-top:1rem">
+            <a class="btn btn-secondary" href="#contact-form">Request a Quote</a>
+          </div>
         </div>
-        <form class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
-          <label>
-            <span class="label">Full Name</span>
-            <input name="name" type="text" required placeholder="Your name" />
-          </label>
-          <label>
-            <span class="label">Email Address</span>
-            <input name="_replyto" type="email" required placeholder="you@example.com" />
-          </label>
-          <label>
-            <span class="label">Phone / WhatsApp</span>
-            <input name="phone" type="tel" placeholder="+254 712 345 678" />
-          </label>
-          <label>
-            <span class="label">Your Message or Order Details</span>
-            <textarea name="message" rows="5" required placeholder="e.g., Requesting a price list for bulk tomatoes, 50L of milk weekly..."></textarea>
-          </label>
-          <button type="submit" class="btn-primary">Send Message</button>
+
+        <div>
+          <form id="contact-form" class="contact-form" method="POST" action="https://formspree.io/f/your-form-id">
+            <label><span class="label">Full Name</span><input name="name" type="text" required placeholder="Your name" /></label>
+            <label><span class="label">Email Address</span><input name="_replyto" type="email" required placeholder="you@example.com" /></label>
+            <label><span class="label">Phone / WhatsApp</span><input name="phone" type="tel" placeholder="+254 712 345 678" /></label>
+            <label><span class="label">Your Message or Order Details</span><textarea name="message" rows="5" required placeholder="e.g., Requesting a price list for bulk tomatoes, 50L of milk weekly..."></textarea></label>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <div class="muted-small" style="margin-top:0.75rem">NOTE: Replace "your-form-id" in the form action with your Formspree endpoint to receive messages.</div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="wrap" style="margin-top:2rem">
+        <h3 style="text-align:center;margin-bottom:0.75rem">Where to Find Us</h3>
+        <div style="max-width:1000px;margin:0 auto;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(2,6,23,0.06)">
+          <!-- Replace with your exact embed or Mapbox/Google Maps link -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d...REPLACE_WITH_ACTUAL_EMBED..." width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter + Brochure -->
+    <section class="section" style="background:#fff">
+      <div class="wrap" style="max-width:900px;margin:0 auto;text-align:center">
+        <h2 style="margin-bottom:0.5rem">Stay Updated — Newsletter & Brochure</h2>
+        <p class="muted" style="margin-bottom:1rem">Subscribe to our newsletter for weekly availability, farm news and special offers. Download our farm brochure for full product list and terms.</p>
+
+        <form method="POST" action="https://formspree.io/f/your-newsletter-id" style="display:flex;gap:0.5rem;justify-content:center;align-items:center;flex-wrap:wrap">
+          <input name="email" type="email" placeholder="you@company.com" required style="padding:0.75rem;border-radius:8px;border:1px solid #eaeaea;min-width:260px"/>
+          <button class="btn btn-secondary" type="submit">Subscribe</button>
+          <a href="/assets/Orpurkel-Farms-Brochure.pdf" class="btn" style="background:#f3f6f3;border:1px solid #e6efe8">Download Brochure (PDF)</a>
         </form>
       </div>
     </section>
+
+    <!-- Terms & Privacy placeholders -->
+    <section class="section" style="background:#f7faf7">
+      <div class="wrap" style="max-width:1000px;margin:0 auto">
+        <div class="grid-2">
+          <div class="card">
+            <h3>Privacy</h3>
+            <p class="muted">We respect your privacy. Personal data collected via forms is used only to process requests and will not be sold. For full details, see our privacy policy page (placeholder).</p>
+            <a href="/privacy.html" class="muted-small">Read full privacy policy</a>
+          </div>
+
+          <div class="card">
+            <h3>Terms</h3>
+            <p class="muted">Sales, delivery and return terms are agreed on a per-contract basis. Institutional customers receive a formal supply agreement. See our terms page for more (placeholder).</p>
+            <a href="/terms.html" class="muted-small">Read full terms & conditions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
   <footer class="site-footer">
     <div class="wrap footer-inner">
-      <div class="footer-info">
-        <strong>Orpurkel Farms Ltd</strong>
-        <p class="muted small">Imbirikani, Kajiado South, Kenya</p>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:1rem">
+        <div style="display:flex;align-items:center;gap:0.75rem">
+          <img src="https://placehold.co/48x48/333/fff?text=OF" alt="Orpurkel logo" style="border-radius:8px"/>
+          <div style="text-align:left">
+            <strong>Orpurkel Farms Ltd</strong><br/>
+            <span class="muted-small">Imbirikani, Kajiado South, Kenya</span>
+          </div>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <a href="#about">About</a> •
+          <a href="#products">Products</a> •
+          <a href="#story">Our Story</a> •
+          <a href="#gallery">Gallery</a> •
+          <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="social-links" aria-label="Social links" style="display:flex;gap:1rem">
+          <a href="https://facebook.com" aria-label="Facebook"><img src="https://placehold.co/32x32/12b76a/fff?text=F" alt="Facebook" /></a>
+          <a href="https://twitter.com" aria-label="Twitter"><img src="https://placehold.co/32x32/12b76a/fff?text=T" alt="Twitter" /></a>
+          <a href="https://instagram.com" aria-label="Instagram"><img src="https://placehold.co/32x32/12b76a/fff?text=I" alt="Instagram" /></a>
+        </div>
+
+        <div class="muted-small">© <span id="year"></span> Orpurkel Farms Ltd — All rights reserved.</div>
       </div>
-      <nav class="footer-nav">
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#story">Our Story</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="social-links">
-        <a href="https://facebook.com" aria-label="Facebook"><img src="https://placehold.co/32x32/12b76a/fff?text=F" alt="Facebook icon" /></a>
-        <a href="https://twitter.com" aria-label="Twitter"><img src="https://placehold.co/32x32/12b76a/fff?text=T" alt="Twitter icon" /></a>
-        <a href="https://instagram.com" aria-label="Instagram"><img src="https://placehold.co/32x32/12b76a/fff?text=I" alt="Instagram icon" /></a>
-      </div>
-      <div class="muted small">© <span id="year"></span> Orpurkel Farms Ltd — All rights reserved.</div>
     </div>
   </footer>
 
-  <!-- ----------------------------------- -->
-  <!-- --- JavaScript for Interactivity --- -->
-  <!-- ----------------------------------- -->
+  <!-- JS: jQuery + Slick for gallery + small interactivity -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
   <script>
-    // Set current year in the footer
+    // Set current year
     document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Smooth scrolling for all anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          targetElement.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
-
-    // Mobile navigation toggle functionality
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('nav-open');
+    // Mobile nav toggle
+    function toggleNav(){
+      var mob = document.getElementById('mobileNav');
+      if(!mob) return;
+      mob.style.display = (mob.style.display === 'none' || mob.style.display === '') ? 'block' : 'none';
       document.body.classList.toggle('nav-open');
+    }
+
+    // Initialize gallery carousel
+    $(document).ready(function(){
+      if($('.gallery-carousel').length){
+        $('.gallery-carousel').slick({
+          dots:true,
+          infinite:true,
+          slidesToShow:3,
+          slidesToScroll:1,
+          autoplay:true,
+          autoplaySpeed:3000,
+          centerMode:true,
+          centerPadding:'0',
+          responsive:[
+            { breakpoint:992, settings:{ slidesToShow:2 } },
+            { breakpoint:768, settings:{ slidesToShow:1, centerMode:false } }
+          ]
+        });
+      }
     });
 
-    // Close mobile nav when a link is clicked
-    document.querySelectorAll('.nav a').forEach(link => {
-      link.addEventListener('click', () => {
-        nav.classList.remove('nav-open');
-        document.body.classList.remove('nav-open');
+    // FAQ toggle
+    function toggleFAQ(el){
+      var ans = el.nextElementSibling;
+      if(ans.classList.contains('open')){
+        ans.classList.remove('open');
+        el.querySelector('span').textContent = '+';
+      } else {
+        ans.classList.add('open');
+        el.querySelector('span').textContent = '-';
+      }
+    }
+
+    // Simple smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+      anchor.addEventListener('click', function(e){
+        // allow normal behavior for external anchors with target _blank etc.
+        var href = this.getAttribute('href');
+        if(!href.startsWith('#')) return;
+        e.preventDefault();
+        var target = document.querySelector(href);
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
       });
     });
 
-    // Initialize the gallery carousel using Slick.js
-    $('.gallery-carousel').slick({
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      centerMode: true,
-      centerPadding: '0',
-      responsive: [
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            centerMode: false
-          }
-        }
-      ]
-    });
-
-    // Simple Formspree integration note
-    const form = document.querySelector('.contact-form');
-    if (form.action.includes('your-form-id')) {
-      const note = document.createElement('div');
-      note.className = 'muted small';
-      note.style.marginTop = '1rem';
-      note.textContent = 'NOTE: Please replace "your-form-id" in the form action with your actual Formspree endpoint to receive form submissions.';
-      form.appendChild(note);
-    }
+    // Accessibility: ensure images have alt text (developer note)
+    // NOTE: Replace placeholder map iframe src with actual Google Maps embed for better SEO.
   </script>
 </body>
 </html>
