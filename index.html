@@ -1,402 +1,472 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Orpurkel Farms Ltd — Premium Produce from Imbirikani, Kajiado South</title>
-  <meta name="description" content="Orpurkel Farms Ltd in Imbirikani, Kajiado South, delivers premium greenhouse tomatoes, colored capsicum, ethical dairy, and regenerative compost to hotels, schools, and retailers in Kenya." />
-  <meta name="keywords" content="Orpurkel Farms, Kajiado, greenhouse tomatoes, capsicum, dairy, compost, sustainable farming, Kenya agriculture" />
-  <meta name="author" content="Orpurkel Farms Ltd" />
-  <meta name="theme-color" content="#0b122b" />
-  <meta property="og:title" content="Orpurkel Farms Ltd — Premium Produce from Imbirikani" />
-  <meta property="og:description" content="Discover premium greenhouse vegetables, ethical dairy, and regenerative compost from Orpurkel Farms in Kajiado South, Kenya." />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1400&auto=format&fit=crop" />
-  <meta property="og:url" content="https://www.orpurkelfarms.com" />
-  <link rel="icon" href="logo.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="#top" aria-label="Orpurkel Farms Home">
-        <img src="logo.svg" class="logo" alt="Orpurkel Farms logo" />
-        <div class="brand-text">
-          <div class="brand-name">Orpurkel Farms Ltd</div>
-          <div class="brand-sub">Imbirikani, Kajiado South — Kenya</div>
-        </div>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span class="hamburger"></span>
-      </button>
-      <nav class="nav" aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#greenhouse">Greenhouse</a>
-        <a href="#dairy">Dairy</a>
-        <a href="#compost">Compost</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#contact" class="btn-primary">Order / Contact</a>
-      </nav>
-    </div>
-  </header>
+/* --- Base Styles & Typography --- */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
 
-  <main id="top">
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
-          <span class="kicker">Fresh • Traceable • Sustainable</span>
-          <h1>Premium Greenhouse Vegetables, Ethical Dairy & Regenerative Compost</h1>
-          <p class="lead">Orpurkel Farms Ltd grows high-quality tomatoes and colored capsicum in state-of-the-art greenhouses, delivers fresh dairy, and produces nutrient-rich compost in Imbirikani, Kajiado South, serving hotels, schools, and retailers with traceable, sustainable produce.</p>
-          <div class="hero-actions">
-            <a href="#products" class="btn-primary">Explore Products</a>
-            <a href="#contact" class="btn-outline">Get a Quote</a>
-          </div>
-          <ul class="highlights">
-            <li><strong>2</strong> Modern Greenhouses</li>
-            <li><strong>Regenerative</strong> Compost Program</li>
-            <li><strong>Hygiene</strong> & IPM SOPs</li>
-            <li><strong>Traceable</strong> Supply Chain</li>
-          </ul>
-        </div>
-        <div class="hero-media">
-          <div class="media-card">
-            <img src="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1400&auto=format&fit=crop" alt="Ripe greenhouse tomatoes in Kajiado" />
-            <div class="media-row">
-              <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=800&auto=format&fit=crop" alt="Colored capsicum harvest" />
-              <img src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?q=80&w=800&auto=format&fit=crop" alt="Fresh milk from Kajiado dairy" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+:root {
+  --color-dark: #0b122b;
+  --color-primary: #007bff;
+  --color-secondary: #f4f4f4;
+  --color-light: #ffffff;
+  --color-text: #333;
+  --color-muted: #666;
+  --font-inter: 'Inter', sans-serif;
+  --max-width: 1200px;
+}
 
-    <section id="about" class="section">
-      <div class="wrap grid-2">
-        <div>
-          <h2>About Orpurkel Farms Ltd</h2>
-          <p class="muted">Located in Imbirikani, Kajiado South, Orpurkel Farms Ltd combines cutting-edge greenhouse technology with sustainable dairy and composting practices. Our commitment to quality, food safety, and environmental stewardship ensures consistent, traceable produce for Nairobi’s hotels, schools, and retailers.</p>
-          <ul class="list">
-            <li><strong>Location:</strong> Imbirikani, Kajiado South, Kenya</li>
-            <li><strong>Resources:</strong> Reliable piped water, fertile soils</li>
-            <li><strong>Markets:</strong> Nairobi hotels, schools, retailers</li>
-            <li><strong>Mission:</strong> Sustainable farming, community empowerment</li>
-          </ul>
-          <a href="#contact" class="btn-secondary">Learn More</a>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1400&auto=format&fit=crop" alt="Scenic view of Orpurkel Farms landscape in Kajiado" />
-        </div>
-      </div>
-    </section>
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
-    <section id="products" class="section">
-      <div class="wrap">
-        <h2>Our Products</h2>
-        <div class="grid-3">
-          <article class="card feature">
-            <img src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?q=80&w=1200&auto=format&fit=crop" alt="Fresh greenhouse tomatoes" />
-            <h3>Greenhouse Tomatoes</h3>
-            <p class="muted">Trellised hybrid varieties, harvested, graded, and packed for reliability and extended shelf life.</p>
-            <ul class="mini-list">
-              <li>Packaging: Ventilated crates</li>
-              <li>Delivery: Scheduled, chilled</li>
-              <li>Indicative: KES 60–80/kg*</li>
-            </ul>
-          </article>
-          <article class="card feature">
-            <img src="https://images.unsplash.com/photo-1610347768885-c3f5e8eb9c53?q=80&w=1200&auto=format&fit=crop" alt="Vibrant colored capsicum" />
-            <h3>Colored Capsicum</h3>
-            <p class="muted">Premium peppers grown in controlled environments, graded for hotels and supermarkets.</p>
-            <ul class="mini-list">
-              <li>Packaging: Size-graded</li>
-              <li>IPM & hygiene SOPs</li>
-              <li>Indicative: KES 80–100/kg*</li>
-            </ul>
-          </article>
-          <article class="card feature">
-            <img src="https://images.unsplash.com/photo-1542444459-db63c9f52a16?q=80&w=1200&auto=format&fit=crop" alt="Fresh milk in a jug" />
-            <h3>Fresh Milk & Yogurt</h3>
-            <p class="muted">From Friesian and Ayrshire cows, delivered chilled with optional yogurt processing.</p>
-            <ul class="mini-list">
-              <li>Milk yield: ~20 L/cow/day</li>
-              <li>Indicative: KES 60–70/L*</li>
-              <li>KDB-compliant handling</li>
-            </ul>
-          </article>
-        </div>
-        <p class="muted small">*Prices are indicative and subject to change. Contact us for institutional pricing and bulk quotes.</p>
-      </div>
-    </section>
+body {
+  font-family: var(--font-inter);
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-light);
+  margin: 0;
+  padding: 0;
+}
 
-    <section id="greenhouse" class="section">
-      <div class="wrap">
-        <h2>Greenhouse Program</h2>
-        <p class="muted">Our two state-of-the-art greenhouses in Imbirikani operate year-round, utilizing certified seeds, precision fertigation, and integrated pest management (IPM) to produce premium tomatoes and capsicum with exceptional taste and shelf life.</p>
-        <div class="grid-2">
-          <div>
-            <ul class="list">
-              <li>Controlled drip irrigation & fertigation</li>
-              <li>Rigorous grading and cool-holding</li>
-              <li>IPM with sticky traps and minimal chemicals</li>
-              <li>Two cycles per year for consistent supply</li>
-            </ul>
-            <a href="#contact" class="btn-secondary">Request a Greenhouse Tour</a>
-          </div>
-          <div class="card">
-            <img src="https://images.unsplash.com/photo-1549887534-1541e9323cbd?q=80&w=1400&auto=format&fit=crop" alt="Inside Orpurkel Farms greenhouse with tomato plants" />
-          </div>
-        </div>
-        <div class="gallery-grid greenhouse-gallery">
-          <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/4397839/pexels-photo-4397839.jpeg?q=80&w=1400&auto=format&fit=crop" alt="Modern greenhouse with tomato plants in Kajiado" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1598511757337-27f9da3c4b53?q=80&w=1400&auto=format&fit=crop" alt="Greenhouse interior with capsicum plants" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/4397840/pexels-photo-4397840.jpeg?q=80&w=1400&auto=format&fit=crop" alt="Workers tending to greenhouse crops in Kenya" />
-          </div>
-        </div>
-      </div>
-    </section>
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1rem;
+}
 
-    <section id="dairy" class="section">
-      <div class="wrap grid-2">
-        <div class="card">
-          <img src="https://images.pexels.com/photos/16245049/pexels-photo-16245049.jpeg?q=80&w=1400&auto=format&fit=crop" alt="Friesian cows grazing in Kajiado South" />
-        </div>
-        <div>
-          <h2>Dairy Program</h2>
-          <p class="muted">Our scalable dairy operation features Friesian and Ayrshire cows, managed with AI breeding, optimized feed, and strict hygiene protocols. We deliver chilled milk and value-added yogurt, compliant with Kenya Dairy Board (KDB) standards.</p>
-          <ul class="list">
-            <li>AI breeding for high-yield genetics</li>
-            <li>Feed optimization with hydroponic fodder</li>
-            <li>Chilled delivery to Nairobi and beyond</li>
-            <li>Mastitis prevention and routine health checks</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-dark);
+  margin-top: 0;
+}
 
-    <section id="compost" class="section">
-      <div class="wrap grid-2">
-        <div>
-          <h2>Compost & Soil Health</h2>
-          <p class="muted">Our regenerative compost program transforms manure and crop residues into nutrient-rich compost, enhancing soil structure and water retention. Surplus compost is sold locally to support Kajiado’s farming community.</p>
-          <ul class="list">
-            <li>Target production: ~30 tons/year</li>
-            <li>Monitored windrows (moisture, pH, temperature)</li>
-            <li>Supports local soil health initiatives</li>
-            <li>Reduces chemical fertilizer dependency</li>
-          </ul>
-        </div>
-        <div class="card">
-          <img src="https://images.unsplash.com/photo-1485633854332-3e40f9cec78f?q=80&w=1400&auto=format&fit=crop" alt="Compost windrow at Orpurkel Farms" />
-        </div>
-      </div>
-    </section>
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+p { margin-bottom: 1.5rem; }
+.lead { font-size: 1.25rem; font-weight: 300; }
+.muted { color: var(--color-muted); }
+.small { font-size: 0.8rem; }
+.kicker { display: block; font-weight: 700; color: var(--color-primary); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
 
-    <section id="gallery" class="section">
-      <div class="wrap">
-        <h2>Gallery</h2>
-        <p class="muted">Discover life at Orpurkel Farms through our gallery of farming activities in Kajiado South, showcasing cows grazing, tomato harvesting, and greenhouse operations.</p>
-        <div class="gallery-carousel">
-          <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/16245049/pexels-photo-16245049.jpeg?q=80&w=1400&auto=format&fit=crop" alt="Cows grazing in Kajiado pastures" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/18330129/pexels-photo-18330129.jpeg?q=80&w=1400&auto=format&fit=crop" alt="Farmer harvesting tomatoes in Kajiado" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1549921296-3c516c7b03ef?q=80&w=1400&auto=format&fit=crop" alt="Greenhouse tomatoes in Kajiado" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/16245048/pexels-photo-16245048.jpeg?q=80&w=1400&auto=format&fit=crop" alt="Cows in Kajiado pasture" />
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.pexels.com/photos/4397840/pexels-photo-4397840.jpeg?q=80&w=1400&auto=format&fit=crop" alt="Workers in greenhouse in Kenya" />
-          </div>
-        </div>
-        <div class="video-container">
-          <h3>Watch Our Farming Journey</h3>
-          <iframe width="100%" height="315" src="https://www.youtube.com/embed/krxsJnn00GE" title="Tomato Farming in Kenya" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          <p class="muted small">Video: I Calculated If Tomato Farming in Kenya Can Make You a Millionaire</p>
-        </div>
-      </div>
-    </section>
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-    <section id="testimonials" class="section">
-      <div class="wrap">
-        <h2>What Our Clients Say</h2>
-        <div class="grid-3">
-          <div class="card testimonial">
-            <p class="muted">"Orpurkel Farms delivers consistently fresh tomatoes and capsicum to our Nairobi hotel. Their quality and reliability are unmatched."</p>
-            <p><strong>— Jane Mwangi, Procurement Manager, Nairobi Hotel</strong></p>
-          </div>
-          <div class="card testimonial">
-            <p class="muted">"The milk from Orpurkel is a staple in our school’s feeding program. It’s always fresh, and their delivery is prompt."</p>
-            <p><strong>— Peter Kimani, Headmaster, Imbirikani Primary</strong></p>
-          </div>
-          <div class="card testimonial">
-            <p class="muted">"Their compost has transformed our farm’s soil health. We’ve seen better yields with less fertilizer."</p>
-            <p><strong>— Sylvia Naserian, Local Farmer, Kajiado</strong></p>
-          </div>
-        </div>
-      </div>
-    </section>
+/* --- Buttons & Links --- */
+.btn-primary, .btn-secondary, .btn-outline {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: 1px solid transparent;
+}
 
-    <section id="sustainability" class="section">
-      <div class="wrap">
-        <h2>Sustainability & Community</h2>
-        <div class="grid-3">
-          <div class="card">
-            <h3>Environmental Stewardship</h3>
-            <p class="muted">We use drip irrigation, IPM, and composting to minimize water waste and chemical use, preserving Kajiado’s ecosystem.</p>
-          </div>
-          <div class="card">
-            <h3>Community Empowerment</h3>
-            <p class="muted">Fair wages, training programs, and local supplier partnerships uplift Imbirikani’s economy.</p>
-          </div>
-          <div class="card">
-            <h3>Transparent Governance</h3>
-            <p class="muted">Adherence to KDB standards, detailed record-keeping, and compliance ensure trust and accountability.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+.btn-primary {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+.btn-primary:hover {
+  background-color: #1e284a;
+}
+.btn-secondary {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+.btn-secondary:hover {
+  background-color: #0056b3;
+}
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-light);
+  border-color: var(--color-light);
+}
+.btn-outline:hover {
+  background-color: var(--color-light);
+  color: var(--color-dark);
+}
 
-    <section id="contact" class="section contact">
-      <div class="wrap grid-2">
-        <div>
-          <h2>Contact & Orders</h2>
-          <p class="muted">We deliver fresh produce and dairy in Imbirikani and Nairobi. Share your needs and preferred delivery schedule, and we’ll provide a tailored quote.</p>
-          <ul class="list">
-            <li>Email: <a href="mailto:info@orpurkelfarms.com">info@orpurkelfarms.com</a></li>
-            <li>Phone/WhatsApp: <a href="tel:+254112944092">+254 112 944 092</a></li>
-            <li>Location: Imbirikani, Kajiado South, Kenya</li>
-          </ul>
-        </div>
-        <form class="card contact-form" method="POST" action="https://formspree.io/f/your-form-id">
-          <label>
-            <span class="label">Name</span>
-            <input name="name" required placeholder="Your name" />
-          </label>
-          <label>
-            <span class="label">Email</span>
-            <input name="_replyto" type="email" required placeholder="you@example.com" />
-          </label>
-          <label>
-            <span class="label">Phone / WhatsApp</span>
-            <input name="phone" placeholder="+254 712 345 678" />
-          </label>
-          <label>
-            <span class="label">Message / Order Details</span>
-            <textarea name="message" rows="5" required placeholder="E.g., 50kg tomatoes weekly, 100L milk daily…"></textarea>
-          </label>
-          <div class="form-actions">
-            <button type="submit" class="btn-primary">Send Request</button>
-            <div class="muted small">Your details are safe with us.</div>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
+/* --- Layouts & Sections --- */
+.section {
+  padding: 5rem 0;
+}
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 
-  <footer class="site-footer">
-    <div class="wrap footer-inner">
-      <div>
-        <strong>Orpurkel Farms Ltd</strong>
-        <div class="muted">Imbirikani, Kajiado South, Kenya</div>
-        <div class="social-links">
-          <a href="https://facebook.com/orpurkelfarms" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://twitter.com/orpurkelfarms" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://instagram.com/orpurkelfarms" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-        </div>
-      </div>
-      <nav class="footer-nav">
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-        <a href="#privacy">Privacy Policy</a>
-      </nav>
-      <div class="muted">© <span id="year"></span> Orpurkel Farms Ltd — All rights reserved.</div>
-    </div>
-  </footer>
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-  <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
-  <script>
-    // Set current year
-    document.getElementById('year').textContent = new Date().getFullYear();
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
 
-    // Mobile navigation toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('nav-open');
-      navToggle.classList.toggle('active');
-    });
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+.list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.8rem;
+}
+.list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+}
 
-    // Formspree action note
-    const form = document.querySelector('.contact-form');
-    if (form && form.action.includes('your-form-id')) {
-      const note = document.createElement('div');
-      note.className = 'muted small';
-      note.style.marginTop = '.5rem';
-      note.textContent = 'NOTE: Replace the form action URL with your Formspree endpoint (see README).';
-      form.appendChild(note);
-    }
+.mini-list {
+  list-style: none;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
 
-    // Gallery carousel
-    $('.gallery-carousel').slick({
-      dots: true,
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 3000,
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1
-          }
-        }
-      ]
-    });
+.card {
+  background: var(--color-secondary);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
 
-    // Form validation
-    form.addEventListener('submit', (e) => {
-      const email = form.querySelector('input[type="email"]').value;
-      const message = form.querySelector('textarea').value;
-      if (!email.includes('@') || message.length < 10) {
-        e.preventDefault();
-        alert('Please provide a valid email and a message with at least 10 characters.');
-      }
-    });
-  </script>
-</body>
-</html>
+.card img {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* --- Header & Navigation --- */
+.site-header {
+  background: var(--color-light);
+  padding: 1rem 0;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--color-dark);
+}
+
+.logo {
+  height: 40px;
+  margin-right: 0.5rem;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.brand-sub {
+  font-size: 0.8rem;
+  color: var(--color-muted);
+}
+
+.nav {
+  display: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--color-dark);
+  font-weight: 600;
+  margin-left: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--color-primary);
+}
+
+.nav-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--color-dark);
+  position: relative;
+}
+
+.hamburger::before, .hamburger::after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--color-dark);
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    align-items: center;
+  }
+  .nav-toggle {
+    display: none;
+  }
+}
+
+.nav-open {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--color-light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.nav-open a {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+/* --- Hero Section --- */
+.hero {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 4rem 0;
+}
+
+.hero h1 {
+  color: var(--color-light);
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.highlights {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.highlights strong {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.hero-media img {
+  border-radius: 8px;
+  margin-top: 2rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.media-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.media-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.media-row img {
+  width: 50%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+  }
+}
+
+/* --- Testimonials --- */
+.testimonial {
+  background: var(--color-secondary);
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonial p:first-of-type {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+
+/* --- Contact Section & Form --- */
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: block;
+}
+
+.contact-form .label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: var(--font-inter);
+}
+
+.form-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.contact.section {
+  background-color: var(--color-secondary);
+}
+
+/* --- Gallery & Carousel --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.gallery-carousel .slick-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: var(--color-primary) !important;
+}
+
+.video-container {
+  margin-top: 3rem;
+  text-align: center;
+}
+.video-container iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- Footer --- */
+.site-footer {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-nav a {
+  color: var(--color-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-nav a:hover {
+  color: var(--color-primary);
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.social-links a {
+  color: var(--color-light);
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--color-primary);
+}
