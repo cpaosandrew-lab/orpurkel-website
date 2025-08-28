@@ -135,6 +135,7 @@
     }
     .hero-inner { max-width: 900px; margin: 0 auto; }
     .hero h1 { font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.03; color: var(--color-light); }
+    /* Updated text color to white for the first paragraph */
     .hero p { opacity: 0.95; color: var(--color-light); }
 
     .stats { background: var(--color-dark); color: var(--color-light); padding: 4rem 0; text-align: center; }
@@ -153,6 +154,7 @@
     @media(min-width:992px) { .story-grid { grid-template-columns: 1fr 1fr; } }
     .story-grid-item { display: flex; flex-direction: column; gap: 1rem; }
 
+    /* Modern Gallery Grid - RUSTIC & DYNAMIC */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -174,6 +176,7 @@
     .gallery-item:hover img {
       transform: scale(1.05);
     }
+    /* Unique layout styles for a more dynamic look */
     .gallery-item:nth-child(2) { grid-column: span 2; }
     .gallery-item:nth-child(3) { grid-row: span 2; }
     .gallery-item:nth-child(5) { grid-column: span 2; }
@@ -188,6 +191,7 @@
       color: var(--color-light);
       text-align: center;
     }
+    /* Updated text color to white for the second paragraph */
     .cta p, .cta h2 { color: var(--color-light); }
 
     .contact-form { display: grid; gap: 1rem; background: #fff; padding: 2rem; border-radius: 10px; box-shadow: 0 10px 30px rgba(2,6,23,0.06); }
@@ -530,7 +534,6 @@
       document.body.classList.toggle('nav-open');
     }
 
-    // No longer need slick carousel for the new gallery layout
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         var href = this.getAttribute('href');
