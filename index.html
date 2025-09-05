@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-KE" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Orpurkel Farms Ltd — Premium Produce from Imbirikani, Kajiado South</title>
 
   <!-- Primary Meta -->
-  <meta name="description" content="Orpurkel Farms Ltd in Imbirikani, Kajiado South, produces premium greenhouse vegetables, ethical Friesian dairy, and regenerative compost, supplying Nairobi with traceable, sustainable produce." />
-  <meta name="keywords" content="Orpurkel Farms, Kajiado, greenhouse vegetables, Friesian dairy, regenerative compost, sustainable farming, Kenya agriculture, Imbirikani, tomatoes, capsicum, onions, milk" />
+  <meta name="description" content="Orpurkel Farms Ltd in Imbirikani, Kajiado South: premium greenhouse vegetables, ethical Friesian dairy, and regenerative compost — traceable, sustainable produce." />
+  <meta name="keywords" content="Orpurkel Farms, Kajiado, greenhouse vegetables, Friesian dairy, regenerative compost, sustainable farming, Kenya" />
   <meta name="author" content="Orpurkel Farms Ltd" />
   <meta name="theme-color" content="#0b122b" />
   <link rel="canonical" href="https://www.orpurkelfarms.com" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="Orpurkel Farms Ltd — Sustainable Farming Excellence" />
-  <meta property="og:description" content="Premium greenhouse vegetables, ethical Friesian dairy, and regenerative compost from Imbirikani, Kajiado South, Kenya." />
+  <meta property="og:description" content="Premium greenhouse vegetables, ethical Friesian dairy, and regenerative compost from Imbirikani, Kajiado South." />
   <meta property="og:image" content="https://i0.wp.com/mwvvibe.com/wp-content/uploads/2020/07/Farm_watering0072.jpg?resize=1280%2C640&ssl=1" />
   <meta property="og:url" content="https://www.orpurkelfarms.com" />
   <meta property="og:type" content="website" />
@@ -25,13 +25,12 @@
   <meta name="twitter:description" content="Greenhouse vegetables, Friesian dairy, and compost from Imbirikani, Kajiado South." />
   <meta name="twitter:image" content="https://i0.wp.com/mwvvibe.com/wp-content/uploads/2020/07/Farm_watering0072.jpg?resize=1280%2C640&ssl=1" />
 
-  <!-- Icons & Fonts -->
-  <link rel="icon" href="https://placehold.co/32x32/333/fff?text=OF" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet" />
 
-  <!-- Tailwind CDN + Config -->
+  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -43,11 +42,11 @@
             secondary: '#f4f7f5',
             light: '#ffffff',
             text: '#222',
-            muted: '#6b7280',
+            muted: '#6b7280'
           },
           fontFamily: {
-            inter: ['Inter', 'sans-serif'],
-            slab: ['Roboto Slab', 'serif'],
+            inter: ['Inter','sans-serif'],
+            slab: ['Roboto Slab','serif']
           },
           boxShadow: {
             card: '0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -2px rgba(0,0,0,.05)'
@@ -57,53 +56,44 @@
     }
   </script>
 
-  <!-- JSON-LD (Organization + LocalBusiness + Products) -->
+  <!-- Structured data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "Orpurkel Farms Ltd",
     "url": "https://www.orpurkelfarms.com",
-    "image": "https://placehold.co/512x512/333/fff?text=OF",
     "logo": "https://placehold.co/128x128/333/fff?text=OF",
     "telephone": "+254717244682",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Landi area, Imbirikani, Kajiado South",
+      "streetAddress": "Landi area, Imbirikani",
       "addressLocality": "Kajiado",
       "addressCountry": "KE"
     },
-    "sameAs": [
-      "https://facebook.com/", "https://instagram.com/", "https://twitter.com/"
-    ],
     "makesOffer": [
-      {"@type": "Offer","itemOffered": {"@type":"Product","name":"Greenhouse Tomatoes"}},
-      {"@type": "Offer","itemOffered": {"@type":"Product","name":"Colored Capsicum"}},
-      {"@type": "Offer","itemOffered": {"@type":"Product","name":"Premium Onions"}},
-      {"@type": "Offer","itemOffered": {"@type":"Product","name":"Fresh Dairy Milk"}},
-      {"@type": "Offer","itemOffered": {"@type":"Product","name":"Regenerative Compost"}},
-      {"@type": "Offer","itemOffered": {"@type":"Product","name":"Dry Beans"}},
-      {"@type": "Offer","itemOffered": {"@type":"Product","name":"Watermelons"}},
-      {"@type": "Offer","itemOffered": {"@type":"Product","name":"Green Maize"}}
+      {"@type":"Offer","itemOffered":{"@type":"Product","name":"Greenhouse Tomatoes"}},
+      {"@type":"Offer","itemOffered":{"@type":"Product","name":"Colored Capsicum"}},
+      {"@type":"Offer","itemOffered":{"@type":"Product","name":"Fresh Dairy Milk"}},
+      {"@type":"Offer","itemOffered":{"@type":"Product","name":"Regenerative Compost"}}
     ]
   }
   </script>
 
   <style>
-    /* Utilities that can't use @apply with CDN are written explicitly in HTML */
-    .sr-only-focusable:focus { position: static; width: auto; height: auto; padding: .5rem .75rem; margin: .5rem; clip: auto; }
-    /* Basic slider styles (no jQuery) */
-    .slider { scroll-snap-type: x mandatory; overflow-x: auto; display: grid; grid-auto-flow: column; grid-auto-columns: 100%; gap: 1rem; }
-    .slide { scroll-snap-align: start; }
-    .dot { width: .5rem; height: .5rem; border-radius: 9999px; background: #D1D5DB; }
-    .dot.active { background: #12b76a; }
-    /* Modal */
-    .modal { display: none; }
-    .modal[open] { display: flex; }
+    /* small helper styles */
+    .sr-only-focusable:focus { position: static; width: auto; height: auto; padding: .5rem .75rem; margin:.5rem; clip:auto; }
+    .slider { scroll-snap-type: x mandatory; overflow-x: auto; display: grid; grid-auto-flow: column; grid-auto-columns: 100%; gap:1rem; }
+    .slide { scroll-snap-align: start; min-width: 100%; }
+    .dot { width:.5rem; height:.5rem; border-radius:9999px; background:#D1D5DB; border: none; cursor:pointer; }
+    .dot.active { background:#12b76a; }
+    dialog::backdrop { background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
   </style>
 </head>
 <body class="font-inter text-text leading-relaxed bg-gradient-to-b from-[#fbfdfb] to-white">
-  <a href="#main" class="sr-only sr-only-focusable bg-primary text-white rounded">Skip to content</a>
+
+  <!-- Skip link -->
+  <a href="#main" class="sr-only sr-only-focusable bg-primary text-white p-2 rounded">Skip to content</a>
 
   <!-- Header -->
   <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
@@ -119,42 +109,42 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-5" aria-label="Main navigation">
-        <a class="text-dark hover:text-primary font-semibold transition-colors" href="#about">About</a>
-        <a class="text-dark hover:text-primary font-semibold transition-colors" href="#products">Products</a>
-        <a class="text-dark hover:text-primary font-semibold transition-colors" href="#dairy">Dairy</a>
-        <a class="text-dark hover:text-primary font-semibold transition-colors" href="#story">Our Story</a>
-        <a class="text-dark hover:text-primary font-semibold transition-colors" href="#gallery">Gallery</a>
-        <button class="bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-modal-open>Get a Quote</button>
+        <a class="text-dark hover:text-primary font-semibold" href="#about">About</a>
+        <a class="text-dark hover:text-primary font-semibold" href="#products">Products</a>
+        <a class="text-dark hover:text-primary font-semibold" href="#dairy">Dairy</a>
+        <a class="text-dark hover:text-primary font-semibold" href="#story">Our Story</a>
+        <a class="text-dark hover:text-primary font-semibold" href="#gallery">Gallery</a>
+        <button class="bg-primary text-white font-semibold py-2 px-4 rounded-lg" data-modal-open>Get a Quote</button>
       </nav>
 
       <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" id="nav-toggle" aria-label="Toggle navigation" aria-controls="mobile-nav" aria-expanded="false">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
       </button>
     </div>
 
-    <!-- Mobile Navigation -->
+    <!-- Mobile nav -->
     <div id="mobile-nav" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-4">
-      <a href="#about" class="block text-dark font-semibold hover:text-primary transition-colors">About</a>
-      <a href="#products" class="block text-dark font-semibold hover:text-primary transition-colors">Products</a>
-      <a href="#dairy" class="block text-dark font-semibold hover:text-primary transition-colors">Dairy</a>
-      <a href="#story" class="block text-dark font-semibold hover:text-primary transition-colors">Our Story</a>
-      <a href="#gallery" class="block text-dark font-semibold hover:text-primary transition-colors">Gallery</a>
-      <button class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-modal-open>Get a Quote</button>
+      <a href="#about" class="block text-dark font-semibold hover:text-primary">About</a>
+      <a href="#products" class="block text-dark font-semibold hover:text-primary">Products</a>
+      <a href="#dairy" class="block text-dark font-semibold hover:text-primary">Dairy</a>
+      <a href="#story" class="block text-dark font-semibold hover:text-primary">Our Story</a>
+      <a href="#gallery" class="block text-dark font-semibold hover:text-primary">Gallery</a>
+      <button class="w-full bg-primary text-white font-semibold py-2 px-4 rounded-lg" data-modal-open>Get a Quote</button>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" aria-labelledby="main-heading">
     <!-- Hero -->
-    <section class="relative min-h-[80vh] flex items-center justify-center text-light text-center" style="background-image:url('https://i0.wp.com/mwvvibe.com/wp-content/uploads/2020/07/Farm_watering0072.jpg?resize=1600%2C900&ssl=1'); background-size:cover; background-position:center;">
+    <section id="top" class="relative min-h-[80vh] flex items-center justify-center text-center text-light" style="background-image:url('https://i0.wp.com/mwvvibe.com/wp-content/uploads/2020/07/Farm_watering0072.jpg?resize=1600%2C900&ssl=1'); background-size:cover; background-position:center;">
       <div class="absolute inset-0 bg-dark/70" aria-hidden="true"></div>
       <div class="relative max-w-4xl px-4 z-10">
         <span class="text-primary font-bold uppercase tracking-wider text-sm mb-2 block">Fresh • Traceable • Sustainable</span>
-        <h1 class="font-slab text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Orpurkel Farms — Cultivating Abundance</h1>
+        <h1 id="main-heading" class="font-slab text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Orpurkel Farms — Cultivating Abundance</h1>
         <p class="text-lg md:text-xl text-white/95 mb-8">In Imbirikani, Kajiado South, we transform arid land into a hub of premium greenhouse vegetables, ethical Friesian dairy, and regenerative compost.</p>
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
-          <a class="bg-secondary text-dark font-semibold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg" href="#products">Our Products</a>
-          <button class="bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg" data-modal-open>Order Now</button>
-          <a class="border border-primary text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 hover:bg-primary" href="#story">Our Story</a>
+          <a class="bg-secondary text-dark font-semibold py-3 px-6 rounded-lg" href="#products">Our Products</a>
+          <button class="bg-primary text-white font-semibold py-3 px-6 rounded-lg" data-modal-open>Order Now</button>
+          <a class="border border-primary text-white font-semibold py-3 px-6 rounded-lg" href="#story">Our Story</a>
         </div>
         <div class="flex flex-wrap justify-center gap-2 mt-8">
           <span class="inline-block bg-primary/20 text-primary font-bold text-xs px-3 py-1 rounded-full">KDB-Compliant Dairy</span>
@@ -170,7 +160,7 @@
       <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div>
           <h2 class="text-3xl md:text-4xl font-slab font-bold mb-4">About Orpurkel Farms</h2>
-          <p class="text-muted mb-4">Orpurkel Farms, named after the Maasai word for ‘wilderness,’ taps into the Nolturesh Water Pipeline to grow premium produce in Kajiado South’s semi-arid land. We blend tradition with modern farming to create a sustainable model for the future.</p>
+          <p class="text-muted mb-4">Orpurkel Farms, named after the Maasai word for ‘wilderness,’ taps into local water resources to grow premium produce in Kajiado South’s semi-arid land. We blend tradition with modern farming to create a sustainable model for the future.</p>
           <p class="text-muted mb-4">With high-tech greenhouses, a healthy Holstein-Friesian dairy herd, and regenerative composting, we run a circular system that restores the land and supports the community.</p>
           <ul class="list-disc list-inside space-y-2 text-muted my-6">
             <li><strong class="text-dark">Location:</strong> Landi area, Imbirikani, Kajiado South, Kenya</li>
@@ -180,7 +170,7 @@
           </ul>
         </div>
         <figure>
-          <img class="w-full rounded-xl shadow-card" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg?s=612x612&w=0&k=20&c=p5vaMlXPJPmg3bhHkaqq6FJJf8ZHINA7uS12vtQK4_s=" alt="Modern greenhouse with rows of Roma VF tomato plants" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='https://placehold.co/800x500/F0F0F0/000?text=Image+Unavailable';" />
+          <img class="w-full rounded-xl shadow-card" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg" alt="Modern greenhouse with Roma VF tomato plants" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500/F0F0F0/000?text=Image+Unavailable';" />
           <figcaption class="text-muted text-sm mt-2 text-center">Our climate-controlled greenhouse growing Roma VF tomatoes</figcaption>
         </figure>
       </div>
@@ -200,76 +190,83 @@
     <section id="products" class="py-16 md:py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-center text-3xl md:text-4xl font-slab font-bold mb-4">Our Premium Products</h2>
-        <p class="text-muted text-center max-w-3xl mx-auto mb-12 text-lg">Explore high-quality greenhouse vegetables, ethical dairy, and regenerative compost, grown with precision for Nairobi’s hotels, schools, and retailers.</p>
+        <p class="text-muted text-center max-w-3xl mx-auto mb-12 text-lg">Explore our high-quality greenhouse vegetables, ethical dairy, and regenerative compost, grown with precision for Nairobi’s hotels, schools, and retailers.</p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Product Card Template repeated -->
+          <!-- Tomatoes -->
           <article class="bg-white p-6 rounded-xl shadow-card">
-            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://media.istockphoto.com/id/1492916388/photo/tomatoes-ripening-in-a-greenhouse-rows-of-red-tomatoes-on-the-vine.jpg?s=612x612&w=0&k=20&c=VxRzPUTnY3F-AV3-CeGkyVQs9p7WU-XSe28oofkF_wc=" alt="Ripe Roma VF tomatoes on the vine" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Tomatoes'" />
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://media.istockphoto.com/id/1492916388/photo/tomatoes-ripening-in-a-greenhouse.jpg" alt="Ripe tomatoes on the vine" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Tomatoes'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Greenhouse Tomatoes</h3>
             <p class="text-muted text-sm mb-3">Roma VF tomatoes grown with drip irrigation and IPM for consistent flavor and quality.</p>
             <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 5kg, 10kg, 20kg crates</p>
           </article>
 
+          <!-- Capsicum -->
           <article class="bg-white p-6 rounded-xl shadow-card">
-            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://5aday.co.nz/assets/site/fruit-and-vegetables/_articleHero/Capsicum.jpg" alt="Red, yellow and green capsicum" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Capsicum'" />
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://5aday.co.nz/assets/site/fruit-and-vegetables/_articleHero/Capsicum.jpg" alt="Colorful capsicum" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Capsicum'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Colored Capsicum</h3>
-            <p class="text-muted text-sm mb-3">Premium bell peppers grown using automated fertigation for vibrant color.</p>
+            <p class="text-muted text-sm mb-3">Premium bell peppers grown using automated fertigation for vibrant colors.</p>
             <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 6kg trays, 10kg boxes</p>
           </article>
 
+          <!-- Onions -->
           <article class="bg-white p-6 rounded-xl shadow-card">
-            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.tastingtable.com/img/gallery/why-are-red-onions-purple/l-intro-1644158494.jpg" alt="Fresh red onions in a crate" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Onions'" />
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.tastingtable.com/img/gallery/why-are-red-onions-purple/l-intro-1644158494.jpg" alt="Red onions in a crate" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Onions'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Premium Onions</h3>
             <p class="text-muted text-sm mb-3">Red Creole onions grown in compost-enriched soils for robust flavor.</p>
             <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 10kg, 50kg bags</p>
           </article>
 
+          <!-- Dairy -->
           <article class="bg-white p-6 rounded-xl shadow-card">
-            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://images.stockcake.com/public/e/1/f/e1f26bd7-b99b-40aa-a70b-391071b294ec_large/fresh-milk-outside-stockcake.jpg" alt="Fresh milk bottles" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Dairy+Milk'" />
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://images.stockcake.com/public/e/1/f/e1f26bd7-b99b-40aa-a70b-391071b294ec_large/fresh-milk-outside-stockcake.jpg" alt="Fresh milk bottles" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Dairy+Milk'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Fresh Dairy Milk</h3>
             <p class="text-muted text-sm mb-3">KDB-compliant milk from Holstein-Friesian cows with chilled delivery.</p>
             <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 1L bottles, 20L bulk</p>
           </article>
 
+          <!-- Compost -->
           <article class="bg-white p-6 rounded-xl shadow-card">
-            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Compost pile" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Compost'" />
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Compost pile" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Compost'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Regenerative Compost</h3>
             <p class="text-muted text-sm mb-3">Lab-tested compost (2-1-1 NPK) from dairy manure and crop residues.</p>
             <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 50kg bags, bulk</p>
           </article>
 
+          <!-- Dry Beans -->
           <article class="bg-white p-6 rounded-xl shadow-card">
-            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.almanac.com/sites/default/files/images/bean-pods-shutterstock_1827338615.jpg" alt="Dry beans" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Dry+Beans'" />
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.almanac.com/sites/default/files/images/bean-pods-shutterstock_1827338615.jpg" alt="Dry beans" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Dry+Beans'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Dry Beans</h3>
             <p class="text-muted text-sm mb-3">High-quality dry beans with uniform size and long shelf life.</p>
             <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 1kg, 5kg, 25kg, 50kg bags</p>
           </article>
 
+          <!-- Watermelons -->
           <article class="bg-white p-6 rounded-xl shadow-card">
-            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://subsites.chinadaily.com.cn/ezhejiang/att/20221021/1666339158606092656.png" alt="Watermelons harvest" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Watermelons'" />
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://subsites.chinadaily.com.cn/ezhejiang/att/20221021/1666339158606092656.png" alt="Watermelons harvest" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Watermelons'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Watermelons</h3>
             <p class="text-muted text-sm mb-3">Juicy, sweet watermelons grown with precision irrigation.</p>
             <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 5kg, 10kg, 15kg fruits</p>
           </article>
 
+          <!-- Green Maize -->
           <article class="bg-white p-6 rounded-xl shadow-card">
-            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://nyakundireport.com/wp-content/uploads/2025/07/maize.jpg" alt="Green maize cobs" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Green+Maize'" />
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://nyakundireport.com/wp-content/uploads/2025/07/maize.jpg" alt="Green maize cobs" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Green+Maize'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Green Maize</h3>
             <p class="text-muted text-sm mb-3">Tender green maize, fresh for roasting and boiling.</p>
@@ -291,11 +288,13 @@
             <h3 class="text-xl font-semibold mb-2">Dairy Waste</h3>
             <p class="text-white/70 text-sm">Our cows produce manure, a key input for our regenerative system.</p>
           </div>
+
           <div class="flex flex-col items-center">
             <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">2</div>
             <h3 class="text-xl font-semibold mb-2">Compost Production</h3>
             <p class="text-white/70 text-sm">Manure plus crop residues become nutrient-rich compost.</p>
           </div>
+
           <div class="flex flex-col items-center">
             <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">3</div>
             <h3 class="text-xl font-semibold mb-2">Crop Nutrition</h3>
@@ -309,7 +308,7 @@
     <section id="dairy" class="bg-secondary py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <figure>
-          <img class="w-full rounded-xl shadow-card" src="https://media.istockphoto.com/id/590588836/photo/milk-cow.jpg?s=612x612&w=0&k=20&c=l_xmyyF1fozQgiNe3u6tkQCmLTEuY1UIRkswDviLbec=" alt="Holstein-Friesian cows grazing" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500?text=Dairy+Farm'" />
+          <img class="w-full rounded-xl shadow-card" src="https://media.istockphoto.com/id/590588836/photo/milk-cow.jpg" alt="Holstein-Friesian cows grazing" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500?text=Dairy+Farm'"/>
           <figcaption class="text-muted text-sm mt-2 text-center">Our Friesian herd grazing sustainably in Imbirikani</figcaption>
         </figure>
         <div>
@@ -321,7 +320,7 @@
             <li><strong class="text-dark">Welfare:</strong> Spacious housing, routine veterinary checks</li>
             <li><strong class="text-dark">Genetics:</strong> High-yield Holstein-Friesian lineage</li>
           </ul>
-          <button class="bg-secondary text-dark font-semibold py-3 px-6 rounded-lg border border-primary transition hover:bg-white" data-modal-open>Request Dairy Quote</button>
+          <button class="bg-secondary text-dark font-semibold py-3 px-6 rounded-lg border border-primary" data-modal-open>Request Dairy Quote</button>
         </div>
       </div>
     </section>
@@ -331,7 +330,7 @@
       <div class="max-w-7xl mx-auto px-4 space-y-16">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <figure class="rounded-xl overflow-hidden shadow-card">
-            <img class="w-full h-auto object-cover" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg?s=612x612&w=0&k=20&c=p5vaMlXPJPmg3bhHkaqq6FJJf8ZHINA7uS12vtQK4_s=" alt="Inside view of a greenhouse with tomato plants" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500?text=Greenhouse'" />
+            <img class="w-full h-auto object-cover" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg" alt="Greenhouse inside view" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500?text=Greenhouse'"/>
           </figure>
           <div>
             <h3 class="text-2xl font-slab font-bold mb-4">Greenhouse Excellence</h3>
@@ -343,9 +342,10 @@
             </ul>
           </div>
         </div>
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <figure class="md:order-last rounded-xl overflow-hidden shadow-card">
-            <img class="w-full h-auto object-cover" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Turning compost" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500?text=Compost+Process'" />
+            <img class="w-full h-auto object-cover" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Compost process" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500?text=Compost+Process'"/>
           </figure>
           <div>
             <h3 class="text-2xl font-slab font-bold mb-4">Regenerative Compost</h3>
@@ -360,7 +360,7 @@
       </div>
     </section>
 
-    <!-- Testimonials (no jQuery; CSS scroll-snap slider) -->
+    <!-- Testimonials -->
     <section id="testimonials" class="bg-secondary py-16 md:py-24">
       <div class="max-w-4xl mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-slab font-bold mb-4">What Our Clients Say</h2>
@@ -368,19 +368,22 @@
 
         <div class="slider rounded-xl">
           <article class="slide bg-white p-8 rounded-xl shadow-card">
-            <p class="text-lg italic text-dark/80">“The tomatoes from Orpurkel Farms are consistently the best we’ve used — flavorful, firm, and always fresh.”</p>
+            <p class="text-lg italic text-dark/80">“The tomatoes from Orpurkel Farms are consistently the best we’ve used—flavorful, firm, and always fresh.”</p>
             <cite class="block font-bold mt-4 text-dark">— Head Chef, Nairobi Hotel</cite>
           </article>
+
           <article class="slide bg-white p-8 rounded-xl shadow-card">
-            <p class="text-lg italic text-dark/80">“Their dairy milk is top-tier. KDB-compliant and ethically produced. The students love it.”</p>
+            <p class="text-lg italic text-dark/80">“Their dairy milk is top-tier. Our school has peace of mind knowing the milk is KDB-compliant.”</p>
             <cite class="block font-bold mt-4 text-dark">— Procurement Manager, Nairobi School</cite>
           </article>
+
           <article class="slide bg-white p-8 rounded-xl shadow-card">
-            <p class="text-lg italic text-dark/80">“Their compost transformed our fields. Healthier crops and fewer chemicals used.”</p>
+            <p class="text-lg italic text-dark/80">“The quality of their compost has transformed our fields. Healthier crops and fewer chemicals used.”</p>
             <cite class="block font-bold mt-4 text-dark">— John Mwangi, Smallholder Farmer</cite>
           </article>
         </div>
-        <div class="flex items-center justify-center gap-2 mt-6" id="slider-dots" aria-label="Testimonials pagination"></div>
+
+        <div id="slider-dots" class="flex items-center justify-center gap-2 mt-6" aria-label="Testimonials pagination"></div>
       </div>
     </section>
 
@@ -392,28 +395,22 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <figure class="rounded-xl overflow-hidden shadow-card lg:col-span-2">
-            <img class="w-full h-full object-cover" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg?s=612x612&w=0&k=20&c=p5vaMlXPJPmg3bhHkaqq6FJJf8ZHINA7uS12vtQK4_s=" alt="Greenhouse interior with tomato plants" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1200x800?text=Greenhouse+Tomatoes'" />
-            <figcaption class="sr-only">Greenhouse tomatoes</figcaption>
+            <img class="w-full h-full object-cover" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg" alt="Greenhouse tomatoes" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1200x800?text=Greenhouse+Tomatoes'"/>
           </figure>
           <figure class="rounded-xl overflow-hidden shadow-card">
-            <img class="w-full h-full object-cover" src="https://media.istockphoto.com/id/590588836/photo/milk-cow.jpg?s=612x612&w=0&k=20&c=l_xmyyF1fozQgiNe3u6tkQCmLTEuY1UIRkswDviLbec=" alt="Friesian cow grazing" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x600?text=Dairy+Cow'" />
-            <figcaption class="sr-only">Friesian cow grazing</figcaption>
+            <img class="w-full h-full object-cover" src="https://media.istockphoto.com/id/590588836/photo/milk-cow.jpg" alt="Friesian cow grazing" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x600?text=Dairy+Cow'"/>
           </figure>
           <figure class="rounded-xl overflow-hidden shadow-card">
-            <img class="w-full h-full object-cover" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Regenerative compost pile" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x600?text=Regenerative+Compost'" />
-            <figcaption class="sr-only">Regenerative compost</figcaption>
+            <img class="w-full h-full object-cover" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Regenerative compost" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x600?text=Regenerative+Compost'"/>
           </figure>
           <figure class="rounded-xl overflow-hidden shadow-card lg:col-span-2">
-            <img class="w-full h-full object-cover" src="https://i0.wp.com/mwvvibe.com/wp-content/uploads/2020/07/Farm_watering0072.jpg?resize=1280%2C640&ssl=1" alt="Drip irrigation at the farm" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1200x800?text=Drip+Irrigation'" />
-            <figcaption class="sr-only">Drip irrigation</figcaption>
+            <img class="w-full h-full object-cover" src="https://i0.wp.com/mwvvibe.com/wp-content/uploads/2020/07/Farm_watering0072.jpg?resize=1280%2C640&ssl=1" alt="Drip irrigation at the farm" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1200x800?text=Drip+Irrigation'"/>
           </figure>
           <figure class="rounded-xl overflow-hidden shadow-card">
-            <img class="w-full h-full object-cover" src="https://nyakundireport.com/wp-content/uploads/2025/07/maize.jpg" alt="Close-up of green maize cobs" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x600?text=Green+Maize'" />
-            <figcaption class="sr-only">Green maize cobs</figcaption>
+            <img class="w-full h-full object-cover" src="https://nyakundireport.com/wp-content/uploads/2025/07/maize.jpg" alt="Green maize cobs" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/400x600?text=Green+Maize'"/>
           </figure>
           <figure class="rounded-xl overflow-hidden shadow-card lg:col-span-2">
-            <img class="w-full h-full object-cover" src="https://subsites.chinadaily.com.cn/ezhejiang/att/20221021/1666339158606092656.png" alt="Harvesting watermelons" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1200x800?text=Watermelons'" />
-            <figcaption class="sr-only">Harvesting watermelons</figcaption>
+            <img class="w-full h-full object-cover" src="https://subsites.chinadaily.com.cn/ezhejiang/att/20221021/1666339158606092656.png" alt="Harvesting watermelons" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/1200x800?text=Watermelons'"/>
           </figure>
         </div>
       </div>
@@ -424,32 +421,36 @@
   <footer class="bg-gray-800 text-white text-center py-10">
     <div class="max-w-7xl mx-auto px-4">
       <div class="flex flex-col md:flex-row justify-center items-center gap-6 mb-4">
-        <a href="#about" class="hover:text-primary transition-colors">About</a>
-        <a href="#products" class="hover:text-primary transition-colors">Products</a>
-        <a href="#dairy" class="hover:text-primary transition-colors">Dairy</a>
-        <a href="#story" class="hover:text-primary transition-colors">Our Story</a>
-        <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+        <a href="#about" class="hover:text-primary">About</a>
+        <a href="#products" class="hover:text-primary">Products</a>
+        <a href="#dairy" class="hover:text-primary">Dairy</a>
+        <a href="#story" class="hover:text-primary">Our Story</a>
+        <a href="#gallery" class="hover:text-primary">Gallery</a>
       </div>
       <p class="text-sm">From Orpurkel Farms Ltd with ❤️ • Imbirikani, Kajiado South • +254 717 244 682</p>
-      <p class="text-xs text-white/70 mt-2">© <span id="y"></span> Orpurkel Farms Ltd. All rights reserved.</p>
+      <p class="text-xs text-white/70 mt-2">© <span id="year"></span> Orpurkel Farms Ltd. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Quote Modal (Accessible) -->
-  <dialog id="quote-modal" class="modal fixed inset-0 items-center justify-center bg-black/40 backdrop-blur-sm p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-    <div class="bg-white rounded-2xl shadow-card p-6 w-full max-w-md relative">
-      <button type="button" class="absolute top-3 right-3 text-muted hover:text-dark" data-modal-close aria-label="Close">✕</button>
-      <h2 id="modal-title" class="text-2xl font-slab font-bold mb-2 text-center">Get a Quote</h2>
-      <p class="text-muted mb-6 text-center">Fill out the form and we'll get back to you with a personalized quote.</p>
-      <form id="contactForm" class="space-y-4" novalidate>
+  <!-- Quote Modal (accessible) -->
+  <dialog id="quote-modal" aria-modal="true" role="dialog" class="p-0 rounded-2xl max-w-2xl w-full">
+    <div class="bg-white rounded-2xl shadow-card p-6 relative">
+      <button type="button" data-modal-close class="absolute top-3 right-3 text-muted hover:text-dark" aria-label="Close">✕</button>
+      <h3 id="modal-title" class="text-2xl font-slab font-bold mb-2 text-center">Get a Quote</h3>
+      <p class="text-muted mb-6 text-center">Fill the form and we'll get back with a personalized quote.</p>
+
+      <!-- Formspree-connected form -->
+      <form id="contactForm" action="https://formspree.io/f/meolpvjk" method="POST" class="space-y-4" novalidate>
         <label class="block">
           <span class="block text-sm font-medium text-gray-700">Full Name</span>
           <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary" />
         </label>
+
         <label class="block">
           <span class="block text-sm font-medium text-gray-700">Email Address</span>
           <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary" />
         </label>
+
         <label class="block">
           <span class="block text-sm font-medium text-gray-700">Product of Interest</span>
           <select id="product" name="product" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
@@ -464,90 +465,167 @@
             <option>Green Maize</option>
           </select>
         </label>
+
         <label class="block">
           <span class="block text-sm font-medium text-gray-700">Your Message</span>
           <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"></textarea>
         </label>
-        <button type="submit" class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 hover:shadow-lg">Submit Request</button>
+
+        <button type="submit" class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg">Submit Request</button>
       </form>
-      <div id="form-message" class="mt-4 text-center hidden"></div>
+
+      <!-- Messages -->
+      <div id="form-success" class="hidden mt-4 text-center text-green-700 font-semibold">✅ Thank you! Your message has been sent. We'll contact you soon.</div>
+      <div id="form-error" class="hidden mt-4 text-center text-red-600 font-semibold">✖ Oops — there was a problem. Please try again later.</div>
     </div>
   </dialog>
 
-  <!-- Scripts (no jQuery) -->
+  <!-- Scripts -->
   <script>
-    // Year
-    document.getElementById('y').textContent = new Date().getFullYear();
+    // Set year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
 
-    // Mobile nav
-    const navToggle = document.getElementById('nav-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-    navToggle.addEventListener('click', () => {
-      const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-      navToggle.setAttribute('aria-expanded', String(!expanded));
-      mobileNav.classList.toggle('hidden');
-    });
+    // Mobile nav toggle
+    (function(){
+      const navToggle = document.getElementById('nav-toggle');
+      const mobileNav = document.getElementById('mobile-nav');
+      if(!navToggle || !mobileNav) return;
+      navToggle.addEventListener('click', () => {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', String(!expanded));
+        mobileNav.classList.toggle('hidden');
+      });
+    })();
 
-    // Modal (using <dialog>) with focus trap
-    const modal = document.getElementById('quote-modal');
-    const openBtns = document.querySelectorAll('[data-modal-open]');
-    const closeBtns = document.querySelectorAll('[data-modal-close]');
+    // Modal open/close + focus trap + accessible handling (dialog fallback)
+    (function() {
+      const dialog = document.getElementById('quote-modal');
+      const openBtns = document.querySelectorAll('[data-modal-open]');
+      const closeBtns = document.querySelectorAll('[data-modal-close]');
+      const firstFocusableSelector = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
 
-    const trapFocus = (e) => {
-      const focusable = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      if (e.key === 'Tab') {
-        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
-        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      function trapFocus(e) {
+        const focusable = dialog.querySelectorAll(firstFocusableSelector);
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (e.key === 'Tab') {
+          if (e.shiftKey && document.activeElement === first) {
+            e.preventDefault(); last.focus();
+          } else if (!e.shiftKey && document.activeElement === last) {
+            e.preventDefault(); first.focus();
+          }
+        } else if (e.key === 'Escape') {
+          closeModal();
+        }
       }
-      if (e.key === 'Escape') closeModal();
-    };
 
-    function openModal() {
-      if (typeof modal.showModal === 'function') modal.showModal(); else modal.setAttribute('open', '');
-      document.body.style.overflow = 'hidden';
-      modal.addEventListener('keydown', trapFocus);
-      setTimeout(() => modal.querySelector('input, select, textarea, button').focus(), 0);
-    }
-    function closeModal() {
-      if (typeof modal.close === 'function') modal.close(); else modal.removeAttribute('open');
-      document.body.style.overflow = '';
-      modal.removeEventListener('keydown', trapFocus);
-    }
+      function openModal() {
+        if (typeof dialog.showModal === 'function') dialog.showModal();
+        else dialog.setAttribute('open', '');
+        document.body.style.overflow = 'hidden';
+        // focus first interactive
+        setTimeout(() => {
+          const first = dialog.querySelector(firstFocusableSelector);
+          if (first) first.focus();
+        }, 50);
+        dialog.addEventListener('keydown', trapFocus);
+      }
 
-    openBtns.forEach(b => b.addEventListener('click', openModal));
-    closeBtns.forEach(b => b.addEventListener('click', closeModal));
-    modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+      function closeModal() {
+        if (typeof dialog.close === 'function') dialog.close();
+        else dialog.removeAttribute('open');
+        document.body.style.overflow = '';
+        dialog.removeEventListener('keydown', trapFocus);
+      }
 
-    // Form submission (mock)
-    document.getElementById('contactForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      const msg = document.getElementById('form-message');
-      msg.textContent = 'Thank you! We\'ve received your request and will contact you shortly.';
-      msg.className = 'mt-4 text-center text-primary font-semibold';
-      msg.style.display = 'block';
-      this.reset();
-    });
+      openBtns.forEach(btn => btn.addEventListener('click', openModal));
+      closeBtns.forEach(btn => btn.addEventListener('click', closeModal));
+      // clicking backdrop closes (when dialog is supported)
+      dialog.addEventListener('click', (e) => {
+        if (e.target === dialog) closeModal();
+      });
+    })();
 
-    // Basic slider dots for testimonials
-    const slider = document.querySelector('.slider');
-    const slides = slider.querySelectorAll('.slide');
-    const dots = document.getElementById('slider-dots');
-    slides.forEach((_, i) => {
-      const d = document.createElement('button');
-      d.className = 'dot';
-      d.setAttribute('aria-label', `Go to slide ${i+1}`);
-      d.addEventListener('click', () => slider.scrollTo({ left: slider.clientWidth * i, behavior: 'smooth' }));
-      dots.appendChild(d);
-    });
-    const setActiveDot = () => {
-      const idx = Math.round(slider.scrollLeft / slider.clientWidth);
-      dots.querySelectorAll('.dot').forEach((el, i) => el.classList.toggle('active', i === idx));
-    };
-    setActiveDot();
-    slider.addEventListener('scroll', () => requestAnimationFrame(setActiveDot));
+    // Formspree submission via fetch, show success/error, auto-close modal
+    (function(){
+      const form = document.getElementById('contactForm');
+      const successEl = document.getElementById('form-success');
+      const errorEl = document.getElementById('form-error');
+      const dialog = document.getElementById('quote-modal');
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        successEl.classList.add('hidden');
+        errorEl.classList.add('hidden');
+
+        const data = new FormData(form);
+        try {
+          const res = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            form.reset();
+            form.classList.add('hidden');
+            successEl.classList.remove('hidden');
+
+            // Auto-close after 4s
+            setTimeout(() => {
+              if (typeof dialog.close === 'function') dialog.close(); else dialog.removeAttribute('open');
+              // restore form state for next time
+              form.classList.remove('hidden');
+              successEl.classList.add('hidden');
+            }, 4000);
+          } else {
+            // handle validation errors (Formspree returns 422)
+            const json = await res.json().catch(()=>null);
+            if (json && json.errors) {
+              errorEl.textContent = json.errors.map(x=>x.message).join(', ') || 'Submission failed';
+            } else {
+              errorEl.textContent = 'Submission failed. Please try again later.';
+            }
+            errorEl.classList.remove('hidden');
+          }
+        } catch (err) {
+          console.error(err);
+          errorEl.textContent = 'Network error. Please check your connection and try again.';
+          errorEl.classList.remove('hidden');
+        }
+      });
+    })();
+
+    // Simple testimonials dots + scroll spy
+    (function(){
+      const slider = document.querySelector('.slider');
+      const slides = slider ? slider.querySelectorAll('.slide') : [];
+      const dotsContainer = document.getElementById('slider-dots');
+      if (!slider || slides.length === 0) return;
+
+      slides.forEach((_, i) => {
+        const btn = document.createElement('button');
+        btn.className = 'dot';
+        btn.setAttribute('aria-label', 'Go to slide ' + (i+1));
+        btn.addEventListener('click', () => slider.scrollTo({ left: slider.clientWidth * i, behavior: 'smooth' }));
+        dotsContainer.appendChild(btn);
+      });
+
+      const dots = dotsContainer.querySelectorAll('.dot');
+      function updateActive() {
+        const idx = Math.round(slider.scrollLeft / slider.clientWidth);
+        dots.forEach((d, i) => d.classList.toggle('active', i === idx));
+      }
+      updateActive();
+      slider.addEventListener('scroll', () => requestAnimationFrame(updateActive));
+      // Optional: auto-advance every 6s
+      let current = 0;
+      setInterval(() => {
+        current = (current + 1) % slides.length;
+        slider.scrollTo({ left: slider.clientWidth * current, behavior: 'smooth' });
+      }, 6000);
+    })();
   </script>
 </body>
 </html>
-
