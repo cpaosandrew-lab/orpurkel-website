@@ -88,6 +88,8 @@
     .dot { width:.5rem; height:.5rem; border-radius:9999px; background:#D1D5DB; border: none; cursor:pointer; }
     .dot.active { background:#12b76a; }
     dialog::backdrop { background: rgba(0,0,0,0.5); backdrop-filter: blur(4px); }
+    /* Fix for anchor scrolling with sticky header */
+    [id] { scroll-margin-top: 80px; }
   </style>
 </head>
 
@@ -224,7 +226,7 @@
           <!-- Onions -->
           <article class="bg-white p-6 rounded-xl shadow-card">
             <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
-              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.tastingtable.com/img/gallery/why-are-red-onions-nine/l-intro-1644158494.jpg" alt="Red onions in a crate" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Onions'"/>
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.tastingtable.com/img/gallery/why-are-red-onions-purple/l-intro-1644158494.jpg" alt="Red onions in a crate" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Onions'"/>
             </div>
             <h3 class="text-xl font-slab font-bold mb-2">Premium Onions</h3>
             <p class="text-muted text-sm mb-3">Red Creole onions grown in compost-enriched soils for robust flavor.</p>
