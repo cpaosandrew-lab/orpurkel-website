@@ -56,9 +56,9 @@
                         inter: ['Inter', 'sans-serif'],
                         slab: ['Roboto Slab', 'serif'],
                     },
-                },
-            },
-        };
+                }
+            }
+        }
     </script>
     <style>
         body {
@@ -68,13 +68,89 @@
         h1, h2, h3, h4 {
             font-family: 'Roboto Slab', serif;
         }
+        .testimonial .slick-dots li button:before {
+            font-size: 16px;
+            color: #12b76a;
+        }
+        .testimonial .slick-dots li.slick-active button:before {
+            color: #0b122b;
+        }
+        .btn-primary {
+            @apply bg-primary text-light font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+        }
+        .btn-secondary {
+            @apply bg-secondary text-dark font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+        }
+        .btn-outline {
+            @apply border border-primary text-primary font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:bg-primary hover:text-light;
+        }
+        .pill {
+            @apply inline-block bg-primary/20 text-primary font-bold text-xs px-3 py-1 rounded-full;
+        }
+        .card {
+            @apply bg-white p-6 rounded-xl shadow-lg;
+        }
+        .gallery-item {
+            @apply relative rounded-xl overflow-hidden shadow-lg;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.4);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: #fefefe;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 90%;
+            max-width: 500px;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        @keyframes animatetop {
+            from {top: -300px; opacity: 0}
+            to {top: 0; opacity: 1}
+        }
     </style>
+    <!-- Slick Carousel for testimonials -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" />
 </head>
 <body class="text-text leading-relaxed font-inter">
-    <!-- Header/Navigation -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
         <div class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a class="flex items-center no-underline text-dark rounded-xl" href="#top" aria-label="Orpurkel Farms Home">
+            <a class="flex items-center no-underline text-dark" href="#top" aria-label="Orpurkel Farms Home">
                 <div class="h-14 w-14 rounded-xl bg-gray-200 flex items-center justify-center p-1 mr-3" aria-hidden="true">
                     <img src="https://placehold.co/64x64/333/fff?text=OF" alt="Orpurkel Farms logo" class="h-12 w-12 rounded-lg" />
                 </div>
@@ -90,7 +166,7 @@
                 <a class="text-dark hover:text-primary transition-colors duration-200 font-semibold" href="#dairy">Dairy</a>
                 <a class="text-dark hover:text-primary transition-colors duration-200 font-semibold" href="#story">Our Story</a>
                 <a class="text-dark hover:text-primary transition-colors duration-200 font-semibold" href="#gallery">Gallery</a>
-                <a class="bg-primary text-light font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" href="#contact-form-section">Get a Quote</a>
+                <button class="btn-primary" onclick="openModal()">Get a Quote</button>
             </nav>
             
             <button class="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary" id="nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
@@ -100,14 +176,14 @@
             </button>
         </div>
         
-        <!-- Mobile Navigation Menu -->
+        <!-- Mobile Navigation -->
         <div id="mobile-nav" class="hidden md:hidden bg-white border-t border-gray-200 px-4 py-4 space-y-4">
-            <a href="#about" class="block text-dark font-semibold hover:text-primary transition-colors duration-200" onclick="toggleNav()">About</a>
-            <a href="#products" class="block text-dark font-semibold hover:text-primary transition-colors duration-200" onclick="toggleNav()">Products</a>
-            <a href="#dairy" class="block text-dark font-semibold hover:text-primary transition-colors duration-200" onclick="toggleNav()">Dairy</a>
-            <a href="#story" class="block text-dark font-semibold hover:text-primary transition-colors duration-200" onclick="toggleNav()">Our Story</a>
-            <a href="#gallery" class="block text-dark font-semibold hover:text-primary transition-colors duration-200" onclick="toggleNav()">Gallery</a>
-            <a href="#contact-form-section" class="bg-primary text-light font-semibold py-3 px-6 rounded-full text-center block transition-all duration-300 transform hover:scale-105 hover:shadow-lg" onclick="toggleNav()">Get a Quote</a>
+            <a href="#about" class="block text-dark font-semibold hover:text-primary transition-colors" onclick="toggleNav()">About</a>
+            <a href="#products" class="block text-dark font-semibold hover:text-primary transition-colors" onclick="toggleNav()">Products</a>
+            <a href="#dairy" class="block text-dark font-semibold hover:text-primary transition-colors" onclick="toggleNav()">Dairy</a>
+            <a href="#story" class="block text-dark font-semibold hover:text-primary transition-colors" onclick="toggleNav()">Our Story</a>
+            <a href="#gallery" class="block text-dark font-semibold hover:text-primary transition-colors" onclick="toggleNav()">Gallery</a>
+            <button class="btn-primary w-full text-center" onclick="openModal()">Get a Quote</button>
         </div>
     </header>
 
@@ -120,15 +196,15 @@
                 <h1 class="font-slab text-4xl sm:text-5xl md:text-6xl font-extrabold mb-4 leading-tight">Orpurkel Farms — Cultivating Abundance</h1>
                 <p class="text-lg md:text-xl text-light/95 mb-8">In Imbirikani, Kajiado South, we transform arid land into a hub of premium greenhouse vegetables, ethical Friesian dairy, and regenerative compost, supplying traceable, sustainable produce.</p>
                 <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
-                    <a class="bg-secondary text-dark font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" href="#products">Our Products</a>
-                    <a class="bg-primary text-light font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" href="#contact-form-section">Order Now</a>
-                    <a class="border border-primary text-primary font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:bg-primary hover:text-light" href="#story">Our Story</a>
+                    <a class="btn-secondary" href="#products">Our Products</a>
+                    <button class="btn-primary" onclick="openModal()">Order Now</button>
+                    <a class="btn-outline" href="#story">Our Story</a>
                 </div>
                 <div class="flex flex-wrap justify-center gap-2 mt-8">
-                    <span class="inline-block bg-primary/20 text-primary font-bold text-xs px-3 py-1 rounded-full">KDB-Compliant Dairy</span>
-                    <span class="inline-block bg-primary/20 text-primary font-bold text-xs px-3 py-1 rounded-full">IPM Practices</span>
-                    <span class="inline-block bg-primary/20 text-primary font-bold text-xs px-3 py-1 rounded-full">Regenerative Farming</span>
-                    <span class="inline-block bg-primary/20 text-primary font-bold text-xs px-3 py-1 rounded-full">Community-Driven</span>
+                    <span class="pill">KDB-Compliant Dairy</span>
+                    <span class="pill">IPM Practices</span>
+                    <span class="pill">Regenerative Farming</span>
+                    <span class="pill">Community-Driven</span>
                 </div>
             </div>
         </section>
@@ -187,54 +263,114 @@
                 <p class="text-muted text-center max-w-3xl mx-auto mb-12 text-lg">Explore our high-quality greenhouse vegetables, ethical dairy, and regenerative compost, grown with precision for Nairobi’s hotels, schools, and retailers.</p>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <article class="card">
                         <div class="relative rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
-                            <img class="h-60 w-full object-cover rounded-xl transition-transform duration-500 hover:scale-105" src="https://media.istockphoto.com/id/1492916388/photo/tomatoes-ripening-in-a-greenhouse-rows-of-red-tomatoes-on-the-vine.jpg?s=612x612&w=0&k=20&c=VxRzPUTnY3F-AV3-CeGkyVQs9p7WU-XSe28oofkF_wc=" alt="Ripe Roma VF tomatoes on the vine in Orpurkel Farms’ greenhouse" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Tomatoes';" />
+                            <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://media.istockphoto.com/id/1492916388/photo/tomatoes-ripening-in-a-greenhouse-rows-of-red-tomatoes-on-the-vine.jpg?s=612x612&w=0&k=20&c=VxRzPUTnY3F-AV3-CeGkyVQs9p7WU-XSe28oofkF_wc=" alt="Ripe Roma VF tomatoes on the vine in Orpurkel Farms’ greenhouse" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Tomatoes';" />
                         </div>
                         <h3 class="text-xl font-slab font-bold mb-2">Greenhouse Tomatoes</h3>
                         <p class="text-muted text-sm mb-3">Roma VF tomatoes grown in climate-controlled greenhouses with drip irrigation and ladybug-based IPM for consistent flavor and quality.</p>
                         <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 5kg, 10kg, 20kg crates</p>
                     </article>
-                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <article class="card">
                         <div class="relative rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
-                            <img class="h-60 w-full object-cover rounded-xl transition-transform duration-500 hover:scale-105" src="https://5aday.co.nz/assets/site/fruit-and-vegetables/_articleHero/Capsicum.jpg" alt="Vibrant red, yellow, and green capsicum freshly harvested from Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Capsicum';" />
+                            <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://5aday.co.nz/assets/site/fruit-and-vegetables/_articleHero/Capsicum.jpg" alt="Vibrant red, yellow, and green capsicum freshly harvested from Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Capsicum';" />
                         </div>
                         <h3 class="text-xl font-slab font-bold mb-2">Colored Capsicum</h3>
                         <p class="text-muted text-sm mb-3">Premium bell peppers, grown using automated fertigation for vibrant colors and culinary excellence.</p>
                         <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 6kg trays, 10kg boxes</p>
                     </article>
-                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <article class="card">
                         <div class="relative rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
-                            <img class="h-60 w-full object-cover rounded-xl transition-transform duration-500 hover:scale-105" src="https://www.tastingtable.com/img/gallery/why-are-red-onions-purple/l-intro-1644158494.jpg" alt="Freshly harvested red onions in a crate at Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Onions';" />
+                            <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.tastingtable.com/img/gallery/why-are-red-onions-purple/l-intro-1644158494.jpg" alt="Freshly harvested red onions in a crate at Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Onions';" />
                         </div>
                         <h3 class="text-xl font-slab font-bold mb-2">Premium Onions</h3>
                         <p class="text-muted text-sm mb-3">Red Creole onions grown in compost-enriched soils, offering robust flavor and extended shelf life.</p>
                         <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 10kg, 50kg bags</p>
                     </article>
-                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <article class="card">
                         <div class="relative rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
-                            <img class="h-60 w-full object-cover rounded-xl transition-transform duration-500 hover:scale-105" src="https://images.stockcake.com/public/e/1/f/e1f26bd7-b99b-40aa-a70b-391071b294ec_large/fresh-milk-outside-stockcake.jpg" alt="Fresh milk bottles from Orpurkel Farms’ Holstein-Friesian herd" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Dairy+Milk';" />
+                            <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://images.stockcake.com/public/e/1/f/e1f26bd7-b99b-40aa-a70b-391071b294ec_large/fresh-milk-outside-stockcake.jpg" alt="Fresh milk bottles from Orpurkel Farms’ Holstein-Friesian herd" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Dairy+Milk';" />
                         </div>
                         <h3 class="text-xl font-slab font-bold mb-2">Fresh Dairy Milk</h3>
                         <p class="text-muted text-sm mb-3">KDB-compliant milk from Holstein-Friesian cows, processed with automated milking and chilled delivery.</p>
                         <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 1L bottles, 20L bulk</p>
                     </article>
-                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <article class="card">
                         <div class="relative rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
-                            <img class="h-60 w-full object-cover rounded-xl transition-transform duration-500 hover:scale-105" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Nutrient-rich compost pile at Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Compost';" />
+                            <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Nutrient-rich compost pile at Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Compost';" />
                         </div>
                         <h3 class="text-xl font-slab font-bold mb-2">Regenerative Compost</h3>
                         <p class="text-muted text-sm mb-3">Lab-tested compost (2-1-1 NPK) from dairy manure and crop residues, enhancing soil fertility.</p>
                         <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 50kg bags, bulk truckloads</p>
                     </article>
-                    <article class="bg-white p-6 rounded-xl shadow-lg">
+                    <article class="card">
                         <div class="relative rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
-                            <img class="h-60 w-full object-cover rounded-xl transition-transform duration-500 hover:scale-105" src="https://www.almanac.com/sites/default/files/images/bean-pods-shutterstock_1827338615.jpg" alt="Premium dry beans at Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Dry+Beans';" />
+                            <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.almanac.com/sites/default/files/images/bean-pods-shutterstock_1827338615.jpg" alt="Premium dry beans at Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Dry+Beans';" />
                         </div>
                         <h3 class="text-xl font-slab font-bold mb-2">Dry Beans</h3>
                         <p class="text-muted text-sm mb-3">High-quality dry beans cultivated in Kajiado South with sustainable practices for rich taste, uniform size, and long shelf life.</p>
                         <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 1kg, 5kg, 25kg, 50kg bags</p>
                     </article>
+                    <article class="card">
+                        <div class="relative rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                            <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://subsites.chinadaily.com.cn/ezhejiang/att/20221021/1666339158606092656.png" alt="Watermelons" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Watermelons';" />
+                        </div>
+                        <h3 class="text-xl font-slab font-bold mb-2">Watermelons</h3>
+                        <p class="text-muted text-sm mb-3">Juicy, sweet watermelons cultivated with precision irrigation for consistent taste and size.</p>
+                        <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 5kg, 10kg, 15kg fruits</p>
+                    </article>
+                    <article class="card">
+                        <div class="relative rounded-xl overflow-hidden mb-4 shadow-sm transition-all duration-300 transform hover:-translate-y-2 hover:shadow-lg">
+                            <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://nyakundireport.com/wp-content/uploads/2025/07/maize.jpg" alt="Green Maize" onerror="this.onerror=null; this.src='https://placehold.co/600x400/F0F0F0/000?text=Green+Maize';" />
+                        </div>
+                        <h3 class="text-xl font-slab font-bold mb-2">Green Maize</h3>
+                        <p class="text-muted text-sm mb-3">Tender green maize harvested fresh for roasting and boiling, directly from fertile fields.</p>
+                        <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 50pc, 100pc sacks</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Circular Process Section -->
+        <section class="bg-dark text-light py-16 md:py-24">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl md:text-4xl font-slab font-bold mb-4">Our Circular Farming Process</h2>
+                <p class="text-light/80 max-w-3xl mx-auto mb-12 text-lg">We close the loop on our farm, using waste to create new resources and ensure a truly sustainable model.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="flex flex-col items-center">
+                        <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">
+                            <span class="absolute text-2xl">1</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Dairy Waste</h3>
+                        <p class="text-light/70 text-sm">Our 50+ cows produce manure, which is a key input for our regenerative system.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">
+                            <span class="absolute text-2xl">2</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM4.332 7.643a1.995 1.995 0 01-1.353-2.185L4.47 3.098c-.198-.94.135-1.936.95-2.617a1.995 1.995 0 012.836-.057c.712.593 1.156 1.488 1.156 2.45v2.857a2.001 2.001 0 01-2.001 2.001H6.18c-.886 0-1.603.716-1.603 1.603V16.89c0 .886.717 1.603 1.603 1.603h4.634a1.996 1.996 0 011.89-1.256V16.5c0-.886.717-1.603 1.603-1.603h1.364c.886 0 1.603.717 1.603 1.603V18.5a2 2 0 01-2 2h-6.634c-1.386 0-2.505-1.119-2.505-2.505V9.457c0-.987.444-1.882 1.156-2.474z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Compost Production</h3>
+                        <p class="text-light/70 text-sm">Manure is combined with crop residues to create nutrient-rich compost that improves soil health.</p>
+                    </div>
+
+                    <div class="flex flex-col items-center">
+                        <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">
+                            <span class="absolute text-2xl">3</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Crop Nutrition</h3>
+                        <p class="text-light/70 text-sm">This compost is used to fertilize our fields and greenhouses, leading to healthier produce and cows.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -258,7 +394,7 @@
                             <li><strong class="text-dark">Welfare:</strong> Spacious housing, bi-weekly veterinary checks</li>
                             <li><strong class="text-dark">Genetics:</strong> High-yield Holstein-Friesian lineage</li>
                         </ul>
-                        <a class="bg-secondary text-dark font-semibold py-3 px-6 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg" href="#contact-form-section">Request Dairy Quote</a>
+                        <button class="btn-secondary" onclick="openModal()">Request Dairy Quote</button>
                     </div>
                 </div>
             </div>
@@ -312,41 +448,19 @@
                 <h2 class="text-center text-3xl md:text-4xl font-slab font-bold mb-4">What Our Clients Say</h2>
                 <p class="text-muted text-center max-w-3xl mx-auto mb-12 text-lg">Hear from hotels, schools, and retailers about the quality and reliability of Orpurkel Farms' produce.</p>
                 
-                <div id="testimonials-container" class="relative overflow-hidden max-w-4xl mx-auto">
-                    <div id="testimonials-slider" class="flex transition-transform duration-500 ease-in-out">
-                        <div class="flex-none w-full p-4">
-                            <div class="text-center testimonial">
-                                <p class="text-lg italic text-dark/80">"The tomatoes from Orpurkel Farms are consistently the best we've used—flavorful, firm, and always fresh. Their reliability makes our kitchen operations seamless."</p>
-                                <cite class="block font-bold mt-4 text-dark">- Head Chef, Nairobi Hotel</cite>
-                            </div>
-                        </div>
-                        <div class="flex-none w-full p-4">
-                            <div class="text-center testimonial">
-                                <p class="text-lg italic text-dark/80">"Their dairy milk is top-tier. Our school has peace of mind knowing the milk is KDB-compliant and from a trusted, ethical source. The students love it."</p>
-                                <cite class="block font-bold mt-4 text-dark">- Procurement Manager, Nairobi School</cite>
-                            </div>
-                        </div>
-                        <div class="flex-none w-full p-4">
-                            <div class="text-center testimonial">
-                                <p class="text-lg italic text-dark/80">"The quality of their compost has transformed our fields. Our crops are healthier, and we've significantly reduced our reliance on chemical fertilizers. A truly regenerative product."</p>
-                                <cite class="block font-bold mt-4 text-dark">- John Mwangi, Smallholder Farmer</cite>
-                            </div>
-                        </div>
+                <div class="testimonials-slider max-w-4xl mx-auto">
+                    <div class="testimonial">
+                        <p class="text-lg italic text-dark/80">"The tomatoes from Orpurkel Farms are consistently the best we've used—flavorful, firm, and always fresh. Their reliability makes our kitchen operations seamless."</p>
+                        <cite class="block font-bold mt-4 text-dark">- Head Chef, Nairobi Hotel</cite>
                     </div>
-                </div>
-                <!-- Slider Controls -->
-                <div class="flex justify-center items-center mt-6 space-x-2">
-                    <button id="prev-btn" class="p-2 rounded-full bg-dark/10 text-dark hover:bg-dark/20 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                        </svg>
-                    </button>
-                    <div id="dots-container" class="flex space-x-2"></div>
-                    <button id="next-btn" class="p-2 rounded-full bg-dark/10 text-dark hover:bg-dark/20 transition-colors">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                        </svg>
-                    </button>
+                    <div class="testimonial">
+                        <p class="text-lg italic text-dark/80">"Their dairy milk is top-tier. Our school has peace of mind knowing the milk is KDB-compliant and from a trusted, ethical source. The students love it."</p>
+                        <cite class="block font-bold mt-4 text-dark">- Procurement Manager, Nairobi School</cite>
+                    </div>
+                    <div class="testimonial">
+                        <p class="text-lg italic text-dark/80">"The quality of their compost has transformed our fields. Our crops are healthier, and we've significantly reduced our reliance on chemical fertilizers. A truly regenerative product."</p>
+                        <cite class="block font-bold mt-4 text-dark">- John Mwangi, Smallholder Farmer</cite>
+                    </div>
                 </div>
             </div>
         </section>
@@ -358,151 +472,130 @@
                 <p class="text-muted text-center max-w-3xl mx-auto mb-12 text-lg">A glimpse into our daily operations and the abundance we cultivate.</p>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="relative rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-[1.02] lg:col-span-2">
-                        <img class="w-full h-full object-cover" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg?s=612x612&w=0&k=20&c=p5vaMlXPJPmg3bhHkaqq6FJJf8ZHINA7uS12vtQK4_s=" alt="Inside view of a greenhouse with Roma VF tomato plants" onerror="this.onerror=null; this.src='https://placehold.co/800x600/F0F0F0/000?text=Gallery+Image+1';" />
+                    <div class="gallery-item lg:col-span-2">
+                        <img class="w-full h-full object-cover rounded-xl" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg?s=612x612&w=0&k=20&c=p5vaMlXPJPmg3bhHkaqq6FJJf8ZHINA7uS12vtQK4_s=" alt="Inside view of a greenhouse with Roma VF tomato plants" onerror="this.onerror=null; this.src='https://placehold.co/1200x800/F0F0F0/000?text=Greenhouse+Tomatoes';" />
                     </div>
-                    <div class="relative rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-[1.02]">
-                        <img class="w-full h-full object-cover" src="https://images.stockcake.com/public/e/1/f/e1f26bd7-b99b-40aa-a70b-391071b294ec_large/fresh-milk-outside-stockcake.jpg" alt="Fresh milk bottles" onerror="this.onerror=null; this.src='https://placehold.co/400x600/F0F0F0/000?text=Gallery+Image+2';" />
+                    <div class="gallery-item">
+                        <img class="w-full h-full object-cover rounded-xl" src="https://media.istockphoto.com/id/590588836/photo/milk-cow.jpg?s=612x612&w=0&k=20&c=l_xmyyF1fozQgiNe3u6tkQCmLTEuY1UIRkswDviLbec=" alt="A Friesian cow grazing on the farm" onerror="this.onerror=null; this.src='https://placehold.co/400x600/F0F0F0/000?text=Dairy+Cow';" />
                     </div>
-                    <div class="relative rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-[1.02]">
-                        <img class="w-full h-full object-cover" src="https://i0.wp.com/mwvvibe.com/wp-content/uploads/2020/07/Farm_watering0072.jpg?resize=1280%2C640&ssl=1" alt="Farmer watering crops in the field" onerror="this.onerror=null; this.src='https://placehold.co/400x600/F0F0F0/000?text=Gallery+Image+3';" />
+                    <div class="gallery-item">
+                        <img class="w-full h-full object-cover rounded-xl" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="A large pile of regenerative compost" onerror="this.onerror=null; this.src='https://placehold.co/400x600/F0F0F0/000?text=Regenerative+Compost';" />
                     </div>
-                    <div class="relative rounded-xl overflow-hidden shadow-lg transform transition-all duration-500 hover:scale-[1.02] lg:col-span-2">
-                        <img class="w-full h-full object-cover" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="A large pile of compost" onerror="this.onerror=null; this.src='https://placehold.co/800x600/F0F0F0/000?text=Gallery+Image+4';" />
+                    <div class="gallery-item lg:col-span-2">
+                        <img class="w-full h-full object-cover rounded-xl" src="https://i0.wp.com/mwvvibe.com/wp-content/uploads/2020/07/Farm_watering0072.jpg?resize=1280%2C640&ssl=1" alt="Drip irrigation at Orpurkel Farms" onerror="this.onerror=null; this.src='https://placehold.co/1200x800/F0F0F0/000?text=Drip+Irrigation';" />
+                    </div>
+                    <div class="gallery-item">
+                        <img class="w-full h-full object-cover rounded-xl" src="https://nyakundireport.com/wp-content/uploads/2025/07/maize.jpg" alt="A close-up of green maize cobs" onerror="this.onerror=null; this.src='https://placehold.co/400x600/F0F0F0/000?text=Green+Maize';" />
+                    </div>
+                    <div class="gallery-item lg:col-span-2">
+                        <img class="w-full h-full object-cover rounded-xl" src="https://subsites.chinadaily.com.cn/ezhejiang/att/20221021/1666339158606092656.png" alt="A farmer harvesting watermelons" onerror="this.onerror=null; this.src='https://placehold.co/1200x800/F0F0F0/000?text=Watermelons';" />
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section id="contact-form-section" class="bg-primary/10 py-16 md:py-24">
-            <div class="container mx-auto px-4">
-                <h2 class="text-center text-3xl md:text-4xl font-slab font-bold mb-4">Get a Quote</h2>
-                <p class="text-muted text-center max-w-3xl mx-auto mb-12 text-lg">Interested in a bulk order? Fill out the form below and we'll get back to you with a personalized quote.</p>
-                
-                <div class="max-w-xl mx-auto p-8 rounded-xl bg-white shadow-lg">
-                    <form class="space-y-6" id="contact-form">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-dark">Full Name</label>
-                            <input type="text" id="name" name="name" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-12 px-4" required>
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-dark">Email Address</label>
-                            <input type="email" id="email" name="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-12 px-4" required>
-                        </div>
-                        <div>
-                            <label for="product" class="block text-sm font-medium text-dark">Product of Interest</label>
-                            <select id="product" name="product" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary h-12 px-4" required>
-                                <option value="" disabled selected>Select a product...</option>
-                                <option value="tomatoes">Greenhouse Tomatoes</option>
-                                <option value="capsicum">Colored Capsicum</option>
-                                <option value="onions">Premium Onions</option>
-                                <option value="milk">Fresh Dairy Milk</option>
-                                <option value="compost">Regenerative Compost</option>
-                                <option value="beans">Dry Beans</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-dark">Your Message</label>
-                            <textarea id="message" name="message" rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary resize-none px-4 py-2" required></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-primary text-light font-semibold py-3 rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-lg">Submit Request</button>
-                    </form>
-                    <div id="form-message" class="mt-4 text-center hidden"></div>
-                </div>
-            </div>
-        </section>
     </main>
-
+    
     <!-- Footer -->
-    <footer class="bg-dark text-light py-12">
-        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div>
-                <h4 class="font-slab font-bold text-xl mb-4">Orpurkel Farms Ltd</h4>
-                <p class="text-light/80 text-sm">Cultivating abundance in Imbirikani, Kajiado South, through sustainable farming practices for premium, traceable produce.</p>
+    <footer class="bg-gray-800 text-white text-center py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8 mb-4">
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#products" class="hover:text-primary transition-colors">Products</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
             </div>
-            <div>
-                <h4 class="font-slab font-bold text-lg mb-4">Quick Links</h4>
-                <ul class="space-y-2">
-                    <li><a href="#about" class="text-light/80 hover:text-primary transition-colors duration-200">About Us</a></li>
-                    <li><a href="#products" class="text-light/80 hover:text-primary transition-colors duration-200">Our Products</a></li>
-                    <li><a href="#story" class="text-light/80 hover:text-primary transition-colors duration-200">Our Story</a></li>
-                    <li><a href="#contact-form-section" class="text-light/80 hover:text-primary transition-colors duration-200">Contact Us</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4 class="font-slab font-bold text-lg mb-4">Contact</h4>
-                <address class="space-y-2 not-italic text-light/80">
-                    <p>Landi Area, Imbirikani, Kajiado South, Kenya</p>
-                    <p>Email: <a href="mailto:info@orpurkelfarms.com" class="hover:text-primary">info@orpurkelfarms.com</a></p>
-                    <p>Phone: <a href="tel:+254717244682" class="hover:text-primary">+254 717 244 682</a></p>
-                </address>
-            </div>
-            <div>
-                <h4 class="font-slab font-bold text-lg mb-4">Social Media</h4>
-                <div class="flex space-x-4">
-                    <a href="https://facebook.com" class="text-light/80 hover:text-primary transition-colors duration-200">Facebook</a>
-                    <a href="https://instagram.com" class="text-light/80 hover:text-primary transition-colors duration-200">Instagram</a>
-                    <a href="https://twitter.com" class="text-light/80 hover:text-primary transition-colors duration-200">Twitter</a>
-                </div>
-            </div>
-        </div>
-        <div class="container mx-auto px-4 text-center text-light/50 text-sm mt-8 border-t border-light/10 pt-8">
-            &copy; <span id="current-year"></span> Orpurkel Farms Ltd. All rights reserved.
+            <p class="text-sm">From Orpurkel Farms Ltd with ❤️</p>
         </div>
     </footer>
 
-    <script>
-        // Set the current year in the footer
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+    <!-- Quote Modal -->
+    <div id="contact-form-section" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h3 class="text-2xl font-slab font-bold mb-4 text-center">Get a Quote</h3>
+            <p class="text-muted mb-6 text-center">Fill out the form below and we'll get back to you as soon as possible with a personalized quote for our products.</p>
+            <form id="contactForm" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+                    <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                    <input type="email" id="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                </div>
+                <div>
+                    <label for="product" class="block text-sm font-medium text-gray-700">Product of Interest</label>
+                    <select id="product" name="product" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary">
+                        <option value="">-- Select a product --</option>
+                        <option value="Tomatoes">Greenhouse Tomatoes</option>
+                        <option value="Capsicum">Colored Capsicum</option>
+                        <option value="Onions">Premium Onions</option>
+                        <option value="Milk">Fresh Dairy Milk</option>
+                        <option value="Compost">Regenerative Compost</option>
+                        <option value="Dry Beans">Dry Beans</option>
+                        <option value="Watermelons">Watermelons</option>
+                        <option value="Green Maize">Green Maize</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700">Your Message</label>
+                    <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-primary focus:ring-primary"></textarea>
+                </div>
+                <button type="submit" class="w-full btn-primary">Submit Request</button>
+            </form>
+            <div id="form-message" class="mt-4 text-center hidden"></div>
+        </div>
+    </div>
 
-        // Toggle mobile navigation
+    <!-- JavaScript for Modal and Carousel -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        // Modal functions
+        function openModal() {
+            document.getElementById('contact-form-section').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('contact-form-section').style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('contact-form-section');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formMessage = document.getElementById('form-message');
+            formMessage.textContent = 'Thank you for your inquiry! We have received your message and will get back to you shortly.';
+            formMessage.className = 'mt-4 text-center text-primary font-semibold';
+            formMessage.style.display = 'block';
+            document.getElementById('contactForm').reset();
+        });
+
+        // Mobile nav toggle
         function toggleNav() {
             const mobileNav = document.getElementById('mobile-nav');
             mobileNav.classList.toggle('hidden');
         }
 
-        // Testimonial Slider Logic (custom, single-file)
-        const slider = document.getElementById('testimonials-slider');
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-        const dotsContainer = document.getElementById('dots-container');
-        const testimonials = slider.querySelectorAll('.testimonial');
-        let currentIndex = 0;
-
-        function updateSlider() {
-            const offset = -currentIndex * 100;
-            slider.style.transform = `translateX(${offset}%)`;
-            updateDots();
-        }
-
-        function updateDots() {
-            dotsContainer.innerHTML = '';
-            testimonials.forEach((_, index) => {
-                const dot = document.createElement('button');
-                dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-dark/20', 'hover:bg-primary', 'transition-colors');
-                if (index === currentIndex) {
-                    dot.classList.add('!bg-primary');
-                }
-                dot.addEventListener('click', () => {
-                    currentIndex = index;
-                    updateSlider();
-                });
-                dotsContainer.appendChild(dot);
+        // Initialize Slick Carousel
+        $(document).ready(function(){
+            $('.testimonials-slider').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                adaptiveHeight: true,
+                autoplay: true,
+                autoplaySpeed: 5000,
+                arrows: false,
             });
-        }
-
-        prevBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex > 0) ? currentIndex - 1 : testimonials.length - 1;
-            updateSlider();
         });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex < testimonials.length - 1) ? currentIndex + 1 : 0;
-            updateSlider();
-        });
-
-        updateSlider(); // Initialize the slider
     </script>
 </body>
 </html>
