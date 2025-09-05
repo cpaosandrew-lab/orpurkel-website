@@ -83,7 +83,7 @@
   <style>
     /* small helper styles */
     .sr-only-focusable:focus { position: static; width: auto; height: auto; padding: .5rem .75rem; margin:.5rem; clip:auto; }
-    .slider { scroll-snap-type: x mandatory; overflow-x: auto; display: grid; grid-auto-flow: column; grid-auto-columns: 100%; gap:1rem; }
+    .slider { scroll-snap-type: x mandatory; overflow-x: auto; display: grid; grid-auto-flow: column; grid-auto-columns: 100%; gap:1rem; -webkit-overflow-scrolling: touch;}
     .slide { scroll-snap-align: start; min-width: 100%; }
     .dot { width:.5rem; height:.5rem; border-radius:9999px; background:#D1D5DB; border: none; cursor:pointer; }
     .dot.active { background:#12b76a; }
@@ -92,11 +92,20 @@
 </head>
 <body class="font-inter text-text leading-relaxed bg-gradient-to-b from-[#fbfdfb] to-white">
 
+  <!-- Top success banner (hidden until form success) -->
+  <div id="top-banner" class="hidden fixed top-4 left-1/2 transform -translate-x-1/2 z-50 w-[95%] max-w-3xl">
+    <div id="top-banner-inner" role="status" aria-live="polite" class="rounded-lg shadow-lg px-4 py-3 bg-green-600 text-white flex items-start gap-3">
+      <svg class="w-6 h-6 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+      <div id="top-banner-text" class="text-sm leading-tight font-semibold">Thanks — your message was sent successfully.</div>
+      <button id="top-banner-close" aria-label="Close banner" class="ml-auto text-white opacity-90 hover:opacity-100">✕</button>
+    </div>
+  </div>
+
   <!-- Skip link -->
   <a href="#main" class="sr-only sr-only-focusable bg-primary text-white p-2 rounded">Skip to content</a>
 
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-gray-200">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
       <a class="flex items-center no-underline text-dark" href="#top" aria-label="Orpurkel Farms Home">
         <div class="h-14 w-14 rounded-xl bg-gray-200 flex items-center justify-center p-1 mr-3" aria-hidden="true">
@@ -193,14 +202,90 @@
         <p class="text-muted text-center max-w-3xl mx-auto mb-12 text-lg">Explore our high-quality greenhouse vegetables, ethical dairy, and regenerative compost, grown with precision for Nairobi’s hotels, schools, and retailers.</p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- (Products omitted for brevity in this comment - same as earlier) -->
-          <!-- Tomatoes, Capsicum, Onions, Dairy, Compost, Dry Beans, Watermelons, Green Maize -->
-          <!-- keep the same markup as before (unchanged) -->
+          <!-- Tomatoes -->
+          <article class="bg-white p-6 rounded-xl shadow-card">
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://media.istockphoto.com/id/1492916388/photo/tomatoes-ripening-in-a-greenhouse.jpg" alt="Ripe tomatoes on the vine" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Tomatoes'"/>
+            </div>
+            <h3 class="text-xl font-slab font-bold mb-2">Greenhouse Tomatoes</h3>
+            <p class="text-muted text-sm mb-3">Roma VF tomatoes grown with drip irrigation and IPM for consistent flavor and quality.</p>
+            <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 5kg, 10kg, 20kg crates</p>
+          </article>
+
+          <!-- Capsicum -->
+          <article class="bg-white p-6 rounded-xl shadow-card">
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://5aday.co.nz/assets/site/fruit-and-vegetables/_articleHero/Capsicum.jpg" alt="Colorful capsicum" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Capsicum'"/>
+            </div>
+            <h3 class="text-xl font-slab font-bold mb-2">Colored Capsicum</h3>
+            <p class="text-muted text-sm mb-3">Premium bell peppers grown using automated fertigation for vibrant colors.</p>
+            <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 6kg trays, 10kg boxes</p>
+          </article>
+
+          <!-- Onions -->
+          <article class="bg-white p-6 rounded-xl shadow-card">
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.tastingtable.com/img/gallery/why-are-red-onions-purple/l-intro-1644158494.jpg" alt="Red onions in a crate" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Onions'"/>
+            </div>
+            <h3 class="text-xl font-slab font-bold mb-2">Premium Onions</h3>
+            <p class="text-muted text-sm mb-3">Red Creole onions grown in compost-enriched soils for robust flavor.</p>
+            <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 10kg, 50kg bags</p>
+          </article>
+
+          <!-- Dairy -->
+          <article class="bg-white p-6 rounded-xl shadow-card">
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://images.stockcake.com/public/e/1/f/e1f26bd7-b99b-40aa-a70b-391071b294ec_large/fresh-milk-outside-stockcake.jpg" alt="Fresh milk bottles" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Dairy+Milk'"/>
+            </div>
+            <h3 class="text-xl font-slab font-bold mb-2">Fresh Dairy Milk</h3>
+            <p class="text-muted text-sm mb-3">KDB-compliant milk from Holstein-Friesian cows with chilled delivery.</p>
+            <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 1L bottles, 20L bulk</p>
+          </article>
+
+          <!-- Compost -->
+          <article class="bg-white p-6 rounded-xl shadow-card">
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Compost pile" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Compost'"/>
+            </div>
+            <h3 class="text-xl font-slab font-bold mb-2">Regenerative Compost</h3>
+            <p class="text-muted text-sm mb-3">Lab-tested compost (2-1-1 NPK) from dairy manure and crop residues.</p>
+            <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 50kg bags, bulk</p>
+          </article>
+
+          <!-- Dry Beans -->
+          <article class="bg-white p-6 rounded-xl shadow-card">
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://www.almanac.com/sites/default/files/images/bean-pods-shutterstock_1827338615.jpg" alt="Dry beans" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Dry+Beans'"/>
+            </div>
+            <h3 class="text-xl font-slab font-bold mb-2">Dry Beans</h3>
+            <p class="text-muted text-sm mb-3">High-quality dry beans with uniform size and long shelf life.</p>
+            <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 1kg, 5kg, 25kg, 50kg bags</p>
+          </article>
+
+          <!-- Watermelons -->
+          <article class="bg-white p-6 rounded-xl shadow-card">
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://subsites.chinadaily.com.cn/ezhejiang/att/20221021/1666339158606092656.png" alt="Watermelons harvest" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Watermelons'"/>
+            </div>
+            <h3 class="text-xl font-slab font-bold mb-2">Watermelons</h3>
+            <p class="text-muted text-sm mb-3">Juicy, sweet watermelons grown with precision irrigation.</p>
+            <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 5kg, 10kg, 15kg fruits</p>
+          </article>
+
+          <!-- Green Maize -->
+          <article class="bg-white p-6 rounded-xl shadow-card">
+            <div class="relative rounded-xl overflow-hidden mb-4 transition-transform duration-300 hover:-translate-y-2">
+              <img class="h-60 w-full object-cover transition-transform duration-500 hover:scale-105" src="https://nyakundireport.com/wp-content/uploads/2025/07/maize.jpg" alt="Green maize cobs" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/600x400?text=Green+Maize'"/>
+            </div>
+            <h3 class="text-xl font-slab font-bold mb-2">Green Maize</h3>
+            <p class="text-muted text-sm mb-3">Tender green maize, fresh for roasting and boiling.</p>
+            <p class="font-bold mt-2 text-sm text-primary">Pack sizes: 50pc, 100pc sacks</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Circular Process -->
+    <!-- Circular Process (your supplied improved section) -->
     <section class="bg-dark text-light py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-slab font-bold mb-4">Our Circular Farming Process</h2>
@@ -208,21 +293,37 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="flex flex-col items-center">
-            <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">1</div>
+            <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">
+              <span class="absolute text-2xl">1</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
             <h3 class="text-xl font-semibold mb-2">Dairy Waste</h3>
-            <p class="text-white/70 text-sm">Our cows produce manure, a key input for our regenerative system.</p>
+            <p class="text-white/70 text-sm">Our 50+ cows produce manure, which is a key input for our regenerative system.</p>
           </div>
 
           <div class="flex flex-col items-center">
-            <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">2</div>
+            <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">
+              <span class="absolute text-2xl">2</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2-3-.895-3-2 1.343-2 3-2zM4.332 7.643a1.995 1.995 0 01-1.353-2.185L4.47 3.098c-.198-.94.135-1.936.95-2.617a1.995 1.995 0 012.836-.057c.712.593 1.156 1.488 1.156 2.45v2.857a2.001 2.001 0 01-2.001 2.001H6.18c-.886 0-1.603.716-1.603 1.603V16.89c0 .886.717 1.603 1.603 1.603h4.634a1.996 1.996 0 011.89-1.256V16.5c0-.886.717-1.603 1.603-1.603h1.364c.886 0 1.603.717 1.603 1.603V18.5a2 2 0 01-2 2h-6.634c-1.386 0-2.505-1.119-2.505-2.505V9.457c0-.987.444-1.882 1.156-2.474z" />
+              </svg>
+            </div>
             <h3 class="text-xl font-semibold mb-2">Compost Production</h3>
-            <p class="text-white/70 text-sm">Manure plus crop residues become nutrient-rich compost.</p>
+            <p class="text-white/70 text-sm">Manure is combined with crop residues to create nutrient-rich compost that improves soil health.</p>
           </div>
 
           <div class="flex flex-col items-center">
-            <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">3</div>
+            <div class="relative flex items-center justify-center w-24 h-24 rounded-full bg-secondary text-dark text-4xl font-extrabold mb-4">
+              <span class="absolute text-2xl">3</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+              </svg>
+            </div>
             <h3 class="text-xl font-semibold mb-2">Crop Nutrition</h3>
-            <p class="text-white/70 text-sm">Compost fertilizes fields and greenhouses for healthier produce.</p>
+            <p class="text-white/70 text-sm">This compost is used to fertilize our fields and greenhouses, leading to healthier produce and cows.</p>
           </div>
         </div>
       </div>
@@ -252,7 +353,35 @@
     <!-- Story -->
     <section id="story" class="py-16 md:py-24">
       <div class="max-w-7xl mx-auto px-4 space-y-16">
-        <!-- Greenhouse Excellence & Compost sections (unchanged) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <figure class="rounded-xl overflow-hidden shadow-card">
+            <img class="w-full h-auto object-cover" src="https://media.istockphoto.com/id/1447227748/photo/tomato-greenhouse.jpg" alt="Greenhouse inside view" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500?text=Greenhouse'"/>
+          </figure>
+          <div>
+            <h3 class="text-2xl font-slab font-bold mb-4">Greenhouse Excellence</h3>
+            <p class="text-muted mb-4">Three greenhouses using drip irrigation, IPM and polycarbonate roofing to grow year-round.</p>
+            <ul class="list-disc list-inside space-y-2 text-muted">
+              <li>Automated fertigation for precise nutrient delivery</li>
+              <li>Biological pest control reduces chemical use</li>
+              <li>Optimized light diffusion for uniform growth</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <figure class="md:order-last rounded-xl overflow-hidden shadow-card">
+            <img class="w-full h-auto object-cover" src="https://i0.wp.com/theorganicfarmer.org/wp-content/uploads/2025/03/worthful-waste-featured.webp?fit=1226%2C995&ssl=1" alt="Compost process" loading="lazy" decoding="async" onerror="this.src='https://placehold.co/800x500?text=Compost+Process'"/>
+          </figure>
+          <div>
+            <h3 class="text-2xl font-slab font-bold mb-4">Regenerative Compost</h3>
+            <p class="text-muted mb-4">We produce compost from dairy manure and crop residues, reducing synthetic inputs and improving soil health.</p>
+            <ul class="list-disc list-inside space-y-2 text-muted">
+              <li>Circularity from dairy waste to crop nutrition</li>
+              <li>Lab-tested for optimal NPK (2-1-1)</li>
+              <li>Enhances soil structure and water retention</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -311,6 +440,61 @@
         </div>
       </div>
     </section>
+
+    <!-- Get in Touch (new section before footer) -->
+    <section id="contact" class="py-16 bg-white border-t">
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2">
+          <h2 class="text-2xl md:text-3xl font-slab font-bold mb-4">Get in Touch with Us</h2>
+          <p class="text-muted mb-4">We'd love to hear from you — whether you'd like to order produce, discuss partnership opportunities, or visit the farm.</p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="font-semibold mb-1">Call Us</h3>
+              <a href="tel:+254717244682" class="text-primary font-medium">+254 717 244 682</a>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="font-semibold mb-1">Email</h3>
+              <a href="mailto:info@orpurkelfarms.com" class="text-primary font-medium">info@orpurkelfarms.com</a>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="font-semibold mb-1">Address</h3>
+              <p class="text-sm">Landi area, Imbirikani, Kajiado South, Kenya</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+              <h3 class="font-semibold mb-1">Partner with Us</h3>
+              <p class="text-sm mb-3">Interested in wholesale, training, or supply partnerships?</p>
+              <button class="bg-primary text-white font-semibold py-2 px-4 rounded" data-modal-open>Partner with Us</button>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <a aria-label="Facebook (placeholder)" href="#" class="inline-flex items-center gap-2 text-muted hover:text-primary">
+              <!-- simple FB icon -->
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2v-2.9h2.2V9.1c0-2.2 1.3-3.4 3.3-3.4.96 0 1.97.17 1.97.17v2.2h-1.12c-1.1 0-1.44.69-1.44 1.4v1.68h2.45l-.39 2.9h-2.06v7A9.99 9.99 0 0022 12z"/></svg>
+              <span class="hidden sm:inline">Facebook</span>
+            </a>
+            <a aria-label="Instagram (placeholder)" href="#" class="inline-flex items-center gap-2 text-muted hover:text-primary">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 2C4.238 2 2 4.238 2 7v10c0 2.762 2.238 5 5 5h10c2.762 0 5-2.238 5-5V7c0-2.762-2.238-5-5-5H7zm5 6.5A4.5 4.5 0 117.5 13 4.5 4.5 0 0112 8.5zm6.36-2.85a1.08 1.08 0 11-1.08-1.08 1.08 1.08 0 011.08 1.08z"/></svg>
+              <span class="hidden sm:inline">Instagram</span>
+            </a>
+            <a aria-label="LinkedIn (placeholder)" href="#" class="inline-flex items-center gap-2 text-muted hover:text-primary">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 3A2 2 0 0121 5v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14zM8.75 18V10.5H6.5V18h2.25zM7.63 9.4a1.3 1.3 0 110-2.6 1.3 1.3 0 010 2.6zM18 18v-4c0-2.2-1.2-3-2.25-3-1.03 0-1.5.6-1.75 1.02V10.5H11.5V18h2.25v-4c0-.6.12-1.2.9-1.2.78 0 .88.64.88 1.25V18H18z"/></svg>
+              <span class="hidden sm:inline">LinkedIn</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Map column -->
+        <div class="w-full h-64 rounded-lg overflow-hidden shadow-card">
+          <iframe
+            title="Orpurkel Farms location"
+            src="https://maps.google.com/maps?q=-2.411018,37.499363&z=15&output=embed"
+            width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Footer -->
@@ -323,7 +507,7 @@
         <a href="#story" class="hover:text-primary">Our Story</a>
         <a href="#gallery" class="hover:text-primary">Gallery</a>
       </div>
-      <p class="text-sm">From Orpurkel Farms Ltd with ❤️ • Imbirikani, Kajiado South • +254 717 244 682</p>
+      <p class="text-sm">From Orpurkel Farms Ltd with ❤️ • Imbirikani, Kajiado South • <a href="tel:+254717244682" class="underline">+254 717 244 682</a></p>
       <p class="text-xs text-white/70 mt-2">© <span id="year"></span> Orpurkel Farms Ltd. All rights reserved.</p>
     </div>
   </footer>
@@ -374,9 +558,6 @@
         <button type="submit" class="w-full bg-primary text-white font-semibold py-3 px-6 rounded-lg">Submit Request</button>
       </form>
 
-      <!-- Messages -->
-      <div id="form-success" class="hidden mt-4 text-center text-green-700 font-semibold">✅ Thank you! Your message has been sent. We'll contact you soon.</div>
-      <div id="form-error" class="hidden mt-4 text-center text-red-600 font-semibold">✖ Oops — there was a problem. Please try again later.</div>
     </div>
   </dialog>
 
@@ -447,18 +628,30 @@
       });
     })();
 
-    // Formspree submission via fetch, show success/error, auto-close modal
+    // Formspree submission via fetch, show top banner success/error, auto-hide banner
     (function(){
       const form = document.getElementById('contactForm');
-      const successEl = document.getElementById('form-success');
-      const errorEl = document.getElementById('form-error');
       const dialog = document.getElementById('quote-modal');
+      const topBanner = document.getElementById('top-banner');
+      const topBannerText = document.getElementById('top-banner-text');
+      const topBannerClose = document.getElementById('top-banner-close');
+
+      // helper to show banner
+      function showBanner(message, isSuccess = true) {
+        topBannerText.textContent = message;
+        topBanner.querySelector('div').classList.toggle('bg-green-600', isSuccess);
+        topBanner.querySelector('div').classList.toggle('bg-red-600', !isSuccess);
+        topBanner.classList.remove('hidden');
+        // auto-hide after 6s
+        setTimeout(() => {
+          topBanner.classList.add('hidden');
+        }, 6000);
+      }
+
+      topBannerClose.addEventListener('click', () => topBanner.classList.add('hidden'));
 
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        successEl.classList.add('hidden');
-        errorEl.classList.add('hidden');
-
         // set reply-to to the sender's email (so replies go to them)
         const emailField = document.getElementById('email');
         const replyToInput = document.getElementById('_replyto');
@@ -474,30 +667,20 @@
 
           if (res.ok) {
             form.reset();
-            form.classList.add('hidden');
-            successEl.classList.remove('hidden');
+            // close dialog
+            if (typeof dialog.close === 'function') dialog.close(); else dialog.removeAttribute('open');
 
-            // Auto-close after 4s
-            setTimeout(() => {
-              if (typeof dialog.close === 'function') dialog.close(); else dialog.removeAttribute('open');
-              // restore form state for next time
-              form.classList.remove('hidden');
-              successEl.classList.add('hidden');
-            }, 4000);
+            // show top banner success
+            showBanner('✅ Thank you — your message was sent. We will contact you soon.', true);
           } else {
             // handle validation errors (Formspree returns 422)
             const json = await res.json().catch(()=>null);
-            if (json && json.errors) {
-              errorEl.textContent = json.errors.map(x=>x.message).join(', ') || 'Submission failed';
-            } else {
-              errorEl.textContent = 'Submission failed. Please try again later.';
-            }
-            errorEl.classList.remove('hidden');
+            const errorMessage = (json && json.errors) ? json.errors.map(x=>x.message).join(', ') : 'Submission failed. Please try again later.';
+            showBanner('✖ ' + errorMessage, false);
           }
         } catch (err) {
           console.error(err);
-          errorEl.textContent = 'Network error. Please check your connection and try again.';
-          errorEl.classList.remove('hidden');
+          showBanner('✖ Network error. Please check your connection and try again.', false);
         }
       });
     })();
